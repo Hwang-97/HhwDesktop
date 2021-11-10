@@ -1,0 +1,15 @@
+AbstractTextEditor.Color.Background=1,1,1
+AbstractTextEditor.Color.Background.SystemDefault=false
+AbstractTextEditor.Color.FindScope=224,226,228
+AbstractTextEditor.Color.SelectionBackground=27,98,145
+AbstractTextEditor.Color.SelectionBackground.SystemDefault=false
+AbstractTextEditor.Color.SelectionForeground.SystemDefault=false
+PHPReadOccurrenceIndicationColor=61,61,4
+currentIPColor=7,54,66
+eclipse.preferences.version=1
+findIndicationColor=44,54,110
+org.eclipse.cdt.ui.occurrenceIndicationColor=61,61,4
+org.eclipse.cdt.ui.writeOccurrenceIndicationColor=61,61,4
+org.sonarlint.eclipse.ui.issueFlow.color=73,55,55
+printMarginColor=101,123,131
+spellingEnabled=false
