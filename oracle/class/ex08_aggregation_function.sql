@@ -67,7 +67,26 @@ SELECT
     ) as "90년대생 여자수"
 from tblInsa;
 
+select sum(area) from tblCountry;
 
+select sum(basicpay) , sum(sudang) from tblInsa;
+
+select (sum(basicpay) + sum(sudang))/60 from tblInsa;
+select avg(basicpay+sudang) from tblInsa;
+
+select 
+    avg(population),-- avgs는 null값을 더하지 않음. 떄문에 결과값이 다름
+    sum(population) / count(*),
+    sum(population) / count(population)
+from tblCountry;
+
+select * from tblCountry;
+
+select * from tblInsa;
+
+select max(height), min(height), max(weight),min(weight) from tblcomedian;
+
+select max(ibsadate), min(ibsadate) from tblInsa;
 
 
 
