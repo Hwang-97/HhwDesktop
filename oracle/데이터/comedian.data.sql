@@ -1,6 +1,6 @@
 -- name.data.sql
 -- 개그맨
-
+DROP TABLE TBLCOMEDIAN;
 CREATE TABLE tblComedian
 (
 	first varchar2(20) not null,

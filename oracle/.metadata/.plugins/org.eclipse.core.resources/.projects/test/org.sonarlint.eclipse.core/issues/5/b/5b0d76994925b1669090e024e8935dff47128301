@@ -1,0 +1,37 @@
+
+‹
+java:S2293*"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ñãçş8²é»’Ò/H+RMINORZ
+CODE_SMELL
+ˆ	java:S127:"XRefactor the code in order to not assign to this loop counter from within the loop body.(¨…ÄK8¬¾Â’Ò/H4RMAJORZ
+CODE_SMELL
+S
+java:S16433"Use a StringBuilder instead.(±ëêôşÿÿÿÿ8¤ÕŞ’Ò/H<RMINORZ
+CODE_SMELL
+S
+java:S16434"Use a StringBuilder instead.(—Áúşÿÿÿÿ8¤ÕŞ’Ò/H6RMINORZ
+CODE_SMELL
+L
+java:S2119)"Save and re-use this "Random".(–áÍÈ8ºÏÒÒ/H3RCRITICALZBUG
+N
+java:S1643>"Use a StringBuilder instead.(×Ÿ¾Ô8ÚÒ/H5RMINORZ
+CODE_SMELL
+i
+java:S6126"2Replace this String concatenation with Text block.(¢Î„–ıÿÿÿÿ8âàøÒ/H/RMAJORZ
+CODE_SMELL
+~
+java:S2095"LUse try-with-resources or close this "BufferedWriter" in a "finally" clause.(Ê¹‰©øÿÿÿÿ8¬æíÒ/H*RBLOCKERZBUG
+N
+java:S16436"Use a StringBuilder instead.(ÓœªÂ8ÚÒ/H.RMINORZ
+CODE_SMELL
+N
+java:S16432"Use a StringBuilder instead.(ÓœªÂ8³ºİÒ/H0RMINORZ
+CODE_SMELL
+S
+java:S1643="Use a StringBuilder instead.(œ¶æõùÿÿÿÿ8ÚÒ/H1RMINORZ
+CODE_SMELL
+N
+java:S16438"Use a StringBuilder instead.(¾©¿»8¤ÕŞ’Ò/H-RMINORZ
+CODE_SMELL
+S
+java:S16437"Use a StringBuilder instead.(±ëêôşÿÿÿÿ8ÚÒ/H7RMINORZ
+CODE_SMELL

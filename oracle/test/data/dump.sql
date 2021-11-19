@@ -1,0 +1,114 @@
+drop sequence seqNum;
+create sequence seqNum;
+drop table tblMemo;
+create table tblMemo
+(   
+    seq number(3),
+    name varchar2(30),
+    memo varchar2(1000) not null,
+    regdate date not null,
+    -- 제약사항 
+    CONSTRAINT tblmemo_seq_pk PRIMARY KEY(seq),
+    CONSTRAINT tblmemo_name_uq UNIQUE(name)
+);
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,'이연재','잠잘것','2019-9-24');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,'강유선','운동할것','2019-6-26');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,'남궁태우','운동할것','2021-1-13');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,'박유선','공부할것','2020-9-12');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,'남궁유선','밥먹을것','2021-11-18');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,'백경태','잠잘것','2019-7-31');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,'최경태','운동할것','2020-12-30');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,'박우기','메모할것','2020-12-31');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,'이수박','운동할것','2019-5-2');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,'최큐엘','데이트 할것','2020-7-11');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,'고경태','메모할것','2019-4-10');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,'강수박','밥먹을것','2020-11-14');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,'남궁태원','메모할것','2020-12-16');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,null,'잠잘것','2020-12-6');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,'김권우','밥먹을것','2021-3-24');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,'박수박','잠잘것','2019-4-18');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,'김큐엘','밥먹을것','2019-9-30');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,'황현우','잠잘것','2020-8-14');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,'최유선','운동할것','2021-10-19');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,'이경태','공부할것','2021-8-22');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,'김현우','공부할것','2020-9-28');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,'우수박','데이트 할것','2020-2-14');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,'고연재','데이트 할것','2021-5-29');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,'박연재','데이트 할것','2020-2-6');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,'강태우','운동할것','2020-7-14');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,'우큐엘','데이트 할것','2020-7-4');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,'김종원','데이트 할것','2019-7-29');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,'남궁현우','데이트 할것','2019-2-27');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,'최태원','운동할것','2019-8-3');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,'이포도','메모할것','2019-3-3');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,'추현우','메모할것','2021-10-3');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,'고현우','운동할것','2019-11-21');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,'우경태','공부할것','2020-4-5');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,'백종원','밥먹을것','2019-2-24');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,'이큐엘','운동할것','2020-4-30');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,'고유선','잠잘것','2019-4-24');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,'고포도','잠잘것','2020-10-21');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,'남궁수박','공부할것','2019-7-17');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,'김경태','공부할것','2019-5-17');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,'최수박','메모할것','2021-9-3');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,'이권우','밥먹을것','2021-9-7');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,'김태원','데이트 할것','2020-6-13');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,'남궁권우','운동할것','2020-2-12');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,null,'공부할것','2021-5-23');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,'최권우','공부할것','2019-2-19');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,'고권우','공부할것','2019-9-6');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,'백수박','공부할것','2020-12-6');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,'추종원','공부할것','2019-12-14');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,'강큐엘','운동할것','2020-8-28');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,'남궁종원','메모할것','2019-6-11');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,'황포도','메모할것','2019-5-29');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,'김포도','잠잘것','2021-11-4');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,'최연재','밥먹을것','2019-7-6');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,null,'운동할것','2020-1-7');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,'최현우','공부할것','2019-11-10');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,'강포도','잠잘것','2020-11-27');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,null,'메모할것','2021-12-20');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,'고큐엘','운동할것','2020-1-13');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,'최태우','밥먹을것','2020-5-25');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,'김유선','밥먹을것','2020-4-5');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,'최우기','공부할것','2020-4-9');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,'박태우','공부할것','2019-9-4');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,'추태우','운동할것','2021-9-24');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,'황연재','밥먹을것','2019-4-17');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,'강태원','운동할것','2020-10-21');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,'우태우','데이트 할것','2020-10-31');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,null,'데이트 할것','2020-7-23');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,'추태원','공부할것','2020-5-3');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,'황태우','운동할것','2020-8-30');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,'강현우','메모할것','2019-3-20');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,null,'공부할것','2020-10-25');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,'박포도','공부할것','2019-10-15');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,'강연재','데이트 할것','2020-1-9');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,null,'운동할것','2019-4-12');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,'백태우','공부할것','2021-4-9');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,'이종원','운동할것','2020-6-11');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,'백권우','밥먹을것','2020-12-6');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,'박큐엘','공부할것','2020-10-22');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,'강종원','메모할것','2020-6-28');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,'추포도','운동할것','2021-1-24');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,null,'데이트 할것','2020-6-14');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,'김수박','운동할것','2019-4-26');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,'추연재','데이트 할것','2020-8-30');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,'황우기','데이트 할것','2021-7-28');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,'김연재','운동할것','2019-9-16');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,'황종원','운동할것','2021-9-15');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,null,'운동할것','2020-5-27');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,null,'공부할것','2019-12-27');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,'황권우','밥먹을것','2019-11-5');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,null,'공부할것','2019-9-26');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,'추수박','잠잘것','2021-10-31');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,'박현우','운동할것','2019-3-26');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,'고수박','잠잘것','2021-10-17');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,'우연재','공부할것','2020-10-26');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,'백우기','데이트 할것','2021-4-24');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,'이태원','공부할것','2019-11-27');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,null,'메모할것','2019-12-8');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,'우포도','메모할것','2021-12-23');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,null,'데이트 할것','2021-10-27');
+insert into tblMemo(seq,name,memo,regdate) values (seqNum.nextVal,'황태원','밥먹을것','2019-10-5');
+select * from tblMemo

@@ -1,3 +1,4 @@
+drop table fine_dust;
 CREATE TABLE fine_dust (
     gu_name           VARCHAR2(50) NOT NULL,  -- 구 명
     mea_station       VARCHAR2(30) NOT NULL,  -- 측정소
@@ -10,7 +11,7 @@ ALTER TABLE fine_dust
 ADD CONSTRAINTS fine_dust_pk PRIMARY KEY (gu_name, mea_station, mea_date);
 
 
-
+drop table fine_dust_standard;
 CREATE TABLE fine_dust_standard (
     org_name          VARCHAR2(50) NOT NULL,  -- 기관명
     std_name          VARCHAR2(30) NOT NULL,  -- 미세먼지 기준
