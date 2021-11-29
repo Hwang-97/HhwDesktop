@@ -219,6 +219,77 @@ from employees e
                                 inner join regions r on r.region_id = c.region_id;
 
 
+--외부 조인
+select * from tblCustomer c
+    inner join tblSales s
+        on c.seq = s.seq;
+-- inner
+select * from tblcustomer;
+select * from tblSales;
+insert into tblCustomer values (4, '호호호', '010-1234-5678', '서울시');
+
+select * from tblCustomer c
+    full outer join tblSales s
+        on c.seq = s.cseq;
+
+select * from tblCustomer c
+    left outer join tblSales s
+        on c.seq = s.cseq;
+
+select * from tblCustomer c
+    right outer join tblSales s
+        on c.seq = s.cseq;
+
+select * from tblVideo v
+    inner join tblRent r
+        on v.seq = r.video;
+
+select * from tblVideo v
+    left outer join tblRent r
+        on v.seq = r.video;
+
+-- 대여가 한번이라고 있는 회원과 그 대여내역
+select * from tblmember;
+select * from tblrent;
+select * from tblmember inner join tblrent on tblmember.seq = tblrent.member;
+-- 모든 회원 대여내역
+select * from tblmember left outer join tblrent on tblmember.seq = tblrent.member;
+
+select DISTINCT(name) from tblmember inner join tblrent on tblmember.seq = tblrent.member;
+
+select
+    tblmember.name,
+    count(tblrent.member)
+from tblmember left outer join tblrent on tblmember.seq = tblrent.member
+    group by tblmember.name;
+
+-- self join 
+drop table tblself;
+create table tblself(
+    seq number primary key,
+    name varchar(30) not null,
+    department VARCHAR(30) null ,
+    super number
+);
+insert into tblself values(1 ,'홍사장',null,null );
+insert into tblself values( 2,'김부장','영업부',1 );
+insert into tblself values( 3,'이과장','영업부', 2);
+insert into tblself values( 4,'정대리','영업부', 3);
+insert into tblself values( 5,'최사원','영업부', 4);
+insert into tblself values( 6,'박부장','개발부',1 );
+insert into tblself values( 7,'하과장','개발부',6 );
+
+select * from tblself;
+
+select a.name as "직원명" , b.name as "상사명" from tblself a left outer join tblself b on a.super = b.seq order by a.seq asc;
+
+select
+    name,
+    (select name from tblself b where b.seq = a.super)
+from tblself a ;
+
+
+
 
 
 

@@ -98,12 +98,14 @@ from employees e inner join jobs j on e.job_id = j.job_id;
 ----------------------------35번은 직원들 중에서 가장 높은 급여를 찾는게 아니라, jobs 테이블에 있는 최고급여(max_salary)를 받는 직원을 찾는겁니다. 그러니 직원들 중 직업별 최고급여를 실제로 한명도 받지 못할 가능성도 있습니다.
 select * from employees;
 select * from jobs;
-
 select
-    DISTINCT(e.first_name || ' ' || e.last_name),j.job_id
-from employees e inner join jobs j on e.job_id = j.job_id
-    group by e.first_name,e.last_name,j.job_id
-    where j.max_salary = (select max(max_salary) from jobs group by job_id where e.job_id = jobs.job_id);
+    * 
+from employees
+    where EMPLOYEE_ID in (select 
+                            case
+                                when e.salary = (select max(max_salary) from jobs j where e.job_id = j.job_id group by job_id) then e.EMPLOYEE_ID
+                            end 
+                        from employees e);
 --36. departments, locations. 모든 부서와 각 부서가 위치하고 있는 도시의 이름을 가져오시오.
 
 --37. locations, countries. location_id 가 2900인 도시가 속한 국가 이름을 가져오시오.

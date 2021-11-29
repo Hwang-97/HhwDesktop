@@ -61,41 +61,123 @@ FROM TBLADDRESSbOOK
     GROUP BY SUBSTR(email,INSTR(EMAIL,'@')+1) , SUBSTR(EMAIL,0,INSTR(EMAIL,'@')-1)
     HAVING AVG(LENGTH(SUBSTR(EMAIL,0,INSTR(EMAIL,'@')-1))) = (SELECT MAX(AVG(LENGTH(SUBSTR(EMAIL,0,INSTR(EMAIL,'@')-1)))) FROM TBLADDRESSbOOK GROUP BY SUBSTR(email,INSTR(EMAIL,'@')+1) , SUBSTR(EMAIL,0,INSTR(EMAIL,'@')-1));
 --14. tblAddressBook. 평균 나이가 가장 많은 출신(hometown)들이 가지고 있는 직업 중 가장 많은 직업은?
+select * from tblAddressBook;
 select
-    hometown, AVG(AGE)
-from tblAddressBook.
-    GROUP BY hometown;
+    job
+from tbladdressbook
+    where hometown = (select HOMETOWN from tblAddressBook group by HOMETOWN Having avg(age) = (select max(avg(age)) from tblAddressBook group by HOMETOWN))
+        group by job
+            HAVING count(job) = (select
+                                    max(count(job))
+                                from tbladdressbook
+                                    where hometown = (select HOMETOWN from tblAddressBook group by HOMETOWN Having avg(age) = (select max(avg(age)) from tblAddressBook group by HOMETOWN))
+                                        group by job);
 --15. tblAddressBook. 성씨별 인원수가 100명 이상 되는 성씨들을 가져오시오.
 select
     *
 from tblAddressBook;
+select
+    substr(NAME,1,1)
+from tblAddressBook
+    group by substr(NAME,1,1)
+        having count(substr(NAME,1,1))>=100;
 --16. tblAddressBook. 남자 평균 나이보다 나이가 많은 서울 태생 + 직업을 가지고 있는 사람들을 가져오시오.
 select
     *
 from tblAddressBook;
+select
+    *
+from tbladdressbook
+    where HOMETOWN = '서울'   and
+            age > (select
+                        avg(age)
+                    from tblAddressBook
+                        where gender = 'm')
+                            and job is not null;
 --17. tblAddressBook. 이메일이 스네이크 명명법으로 만들어진 사람들 중에서 여자이며, 20대이며, 키가 150~160cm 사이며, 고향이 서울 또는 인천인 사람들만 가져오시오.
 select
     *
 from tblAddressBook;
+select
+    *
+from tblAddressBook
+    where email like '%@_%'escape'@' and
+            gender = 'f' and
+            age between 20 and 29 and
+            height between 150 and 160 and
+            hometown in ('서울','인천');
 --18. tblAddressBook. gmail.com을 사용하는 사람들의 성별 > 세대별(10,20,30,40대) 인원수를 가져오시오.
 select
     *
 from tblAddressBook;
+select
+    floor(age/10)*10,
+    gender,
+    count(floor(age/10))
+from tblAddressBook
+    where lower(email) like '%gmail.com'
+        group by gender , floor(age/10)
+        order by floor(age/10);
 --19. tblAddressBook. 가장 나이가 많으면서 가장 몸무게가 많이 나가는 사람과 같은 직업을 가지는 사람들을 가져오시오.
 select
     *
 from tblAddressBook;
+select
+    *
+from tblAddressBook
+    where job = (select
+                        job
+                    from tblAddressBook
+                        where age = (select max(age) from tblAddressBook) and
+                    weight = (select max(weight) from tblAddressBook));
 --20. tblAddressBook. '건물주'와 '건물주자제분'들의 거주지가 서울과 지방의 비율이 어떻게 되느냐?
 select
     *
 from tblAddressBook;
+select
+    to_char(round((count(decode(substr(address,1,instr(address,' ')-1),'서울특별시',1)))/count(*)*100,1),'99.9') || '%' as "서울",
+    to_char(round((count(*) - count(decode(substr(address,1,instr(address,' ')-1),'서울특별시',1)))/count(*)*100,1),'99.9') || '%' as "지방"
+from tblAddressBook
+    where job in('건물주','건물자제분');
 --21. tblAddressBook.  동명이인이 여러명 있습니다. 이 중 가장 인원수가 많은 동명이인(모든 이도윤)의 명단을 가져오시오.
 select
     *
-from tblAddressBook;
+from tblAddressBook
+    where name = (select
+                        name
+                    from tblAddressBook
+                        group by name
+                        having count(name) =  (select
+                                                    max(count(name))
+                                                from tblAddressBook
+                                                    group by name));
+
 --22. tblAddressBook. 가장 사람이 많은 직업의(332명) 세대별 비율을 구하시오.
 --    [10대]       [20대]       [30대]       [40대]
 --    8.7%        30.7%        28.3%        32.2%
 select
     *
 from tblAddressBook;
+
+select
+    floor(age/10)*10 as "세대",
+    round((count(*)/(select
+                count(*)
+            from tblAddressBook
+                where job = (select
+                                job
+                            from tblAddressBook
+                                group by job
+                                having count(job) = (select max(count(job)) from tblAddressBook group by job))))*100,1) as "비율"
+from tblAddressBook
+    where job = (select
+                    job
+                from tblAddressBook
+                    group by job
+                    having count(job) = (select max(count(job)) from tblAddressBook group by job))
+    group by floor(age/10);
+
+
+
+
+
