@@ -1,6 +1,6 @@
 -- todo.data.sql
 -- 할일 테이블 + 데이터
-
+drop table tblTodo;
 CREATE TABLE tblTodo
 (
 	seq number primary key,

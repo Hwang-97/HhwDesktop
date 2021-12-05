@@ -546,6 +546,127 @@ end fGender;
 
 select * from tblInsa;
 -----------------------------------------------------------------------------
+--트리거
+create or replace trigger 트리거명
+    트리거 옵션
+    before | alter -- 추가시점에 따라 이전인지 이후인지 지정
+    insert | update | delete on 트리거 명
+    foreachrom
+declare
+    선언부;
+begin
+    실행부
+exception
+    예외처리부;
+end;
+
+
+
+create table tblLogStaff(
+    seq number primary key,
+    massage varchar2(1000) not null,
+    regdate date default sysdate not null
+);
+drop sequence seqLogStaff;
+create sequence seqLogStaff start with 5;
+--직원 추가 삭제 수정시 테이블에 기록을 남김.
+insert into tblstaff(seq, name , salary , address) values (5,'유재석',300,'서울시');
+insert into tblLogStaff (seq, massage , regdate) values (seqLogStaff.nextVal,'유재석을 추가했습니다.', default);
+
+insert into tblstaff(seq, name , salary , address) values (6,'강호동',350,'부산시');
+
+select * from tblstaff;
+select * from tblLogStaff;
+
+create or replace procedure prcAddStaff(
+    pseq number,
+    pname varchar2,
+    psalary number,
+    paddress varchar2
+)
+is begin
+    insert into tblStaff(seq,name,salary,address) values(pseq,pname,psalary,paddress);
+    insert into tblLogStaff(seq,massage,regdate) values (seqLogStaff.nextval,pname || '직원을 추가했습니다.',default);
+end;
+
+
+begin
+    procaddstaff(7,'제시',250,'울산시');
+end;
+
+
+create or replace trigger trgLogStaff
+    after
+    insert on tblStaff -- 한줄이지만 가독성을 위해서 줄바꿈
+declare -- 만들자 마자 감시 시작
+    
+begin
+     insert into tblLogStaff(seq,massage,regdate) values (seqLogStaff.nextval,'새 직원을 추가했습니다.',default);
+end trgLogStaff;
+
+insert into 
+
+
+SELECT * FROM tblTodo;
+
+set serveroutput on;
+
+create or replace trigger trgTodo
+    after
+    update on tblTodo
+    for each row
+begin
+--    dbms_output.put_line('tblTODO가 수정되었습니다.');
+    dbms_output.put_line(:new.title || '수정되었습니다.');
+    dbms_output.put_line(:old.title || '수정되었습니다.');
+end;//////////
+
+select * from tblTodo;
+
+update tblTodo set title  = '고양이 산책시키기' where seq =5;
+update tblTodo set completedate  = sysdate where completedate is null;
+rollback;
+
+select * from tblproject;
+select * from tblStaff;
+
+create or replace procedure procDeleteStaff(
+    prenum in number,
+    num in number,
+    result out number
+)
+is
+begin
+    update tblProject set rblstaff_seq = num where rblstaff_seq = prenum;
+    delete tblstaff where rblstaff_seq = prenum;
+    result := 1;
+    dbms_output.put_line(result);
+exception
+    when others then
+    result := 0;
+    dbms_output.put_line(result);
+end;
+
+declare
+    vresult number;
+begin
+    procDeleteStaff(4,3,vresult);
+    dbms_output.put_line(vresult);
+end;
+
+
+SELECT fk.owner, fk.constraint_name , fk.table_name
+  FROM all_constraints fk, all_constraints pk
+ WHERE fk.R_CONSTRAINT_NAME = pk.CONSTRAINT_NAME
+   AND fk.CONSTRAINT_TYPE = 'R'
+   AND pk.TABLE_NAME = 'DEPARTMENTS' --대문자
+ ORDER BY fk.TABLE_NAME;
+
+
+
+
+
+
 
 
 

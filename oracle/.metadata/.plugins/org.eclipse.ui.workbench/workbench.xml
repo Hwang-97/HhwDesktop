@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workbench progressCount="13" version="2.0">
 <workbenchAdvisor/>
-<window height="1050" width="978" x="951" y="-9">
+<window height="1050" maximized="true" width="978" x="951" y="-9">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
@@ -32,6 +32,7 @@
 <part id="4"/>
 <part id="5"/>
 <part id="6"/>
+<part id="7"/>
 </presentation>
 </folder>
 </info>
@@ -57,6 +58,9 @@
 <editor activePart="true" focus="true" id="com.tomato.exerd.editor.DiagramEditor" name="5조 erd 진짜 최종안.exerd" partName="5조 erd 진짜 최종안.exerd" path="D:/class/oracle/erd/5TeamProject/5조 erd 진짜 최종안.exerd" title="5조 erd 진짜 최종안.exerd" tooltip="erd/5TeamProject/5조 erd 진짜 최종안.exerd" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/erd/5TeamProject/5조 erd 진짜 최종안.exerd"/>
 </editor>
+<editor id="com.tomato.exerd.editor.DiagramEditor" name="파일생성순.exerd" partName="파일생성순.exerd" path="D:/class/oracle/erd/5TeamProject/파일생성순.exerd" title="파일생성순.exerd" tooltip="erd/5TeamProject/파일생성순.exerd" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/erd/5TeamProject/파일생성순.exerd"/>
+</editor>
 </editors>
 <views>
 <view id="org.eclipse.ui.views.ResourceNavigator" partName="네비게이터">
@@ -69,7 +73,7 @@
 <element path="/erd/5TeamProject"/>
 </expanded>
 <selection>
-<element path="/erd/5TeamProject/5조 erd 진짜 최종안.exerd"/>
+<element path="/erd/5TeamProject/파일생성순.exerd"/>
 </selection>
 </viewState>
 </view>
@@ -196,7 +200,6 @@
 <editors>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.tomato.exerd.editor.DiagramEditor" path="/erd/업수.exerd"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.tomato.exerd.editor.DiagramEditor" path="/erd/수업.exerd"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.tomato.exerd.editor.DiagramEditor" path="/erd/수업.exerd"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.tomato.exerd.editor.DiagramEditor" path="/erd/hr.exerd"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.tomato.exerd.editor.DiagramEditor" path="/erd/순공학테스트트.exerd"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.tomato.exerd.editor.DiagramEditor" path="/erd/수업.exerd"/>
@@ -212,52 +215,62 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.tomato.exerd.editor.DiagramEditor" path="/erd/5TeamProject/21-11-28.exerd"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.tomato.exerd.editor.DiagramEditor" path="/erd/5TeamProject/5조 erd 최종안.exerd"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.tomato.exerd.editor.DiagramEditor" path="/erd/5TeamProject/5조 erd 진짜 최종안.exerd"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.tomato.exerd.editor.DiagramEditor" path="/erd/5TeamProject/파일생성순.exerd"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.tomato.exerd.editor.DiagramEditor" path="/erd/5TeamProject/5조 erd 최종안.exerd"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.tomato.exerd.editor.DiagramEditor" path="/erd/5TeamProject/21-11-26.exerd"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.tomato.exerd.editor.DiagramEditor" path="/erd/5TeamProject/파일생성순.exerd"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.tomato.exerd.editor.DiagramEditor" path="/erd/5TeamProject/5조 erd 진짜 최종안.exerd"/>
 </editors>
 <item historyLabel="업수.exerd" index="0"/>
 <item historyLabel="수업.exerd" index="1"/>
-<item historyLabel="업수.exerd" index="0"/>
-<item historyLabel="수업.exerd" index="2"/>
-<item historyLabel="hr.exerd" index="3"/>
-<item historyLabel="수업.exerd" index="2"/>
-<item historyLabel="hr.exerd" index="3"/>
-<item historyLabel="순공학테스트트.exerd" index="4"/>
-<item historyLabel="hr.exerd" index="3"/>
-<item historyLabel="순공학테스트트.exerd" index="4"/>
-<item historyLabel="수업.exerd" index="5"/>
-<item historyLabel="순공학테스트트.exerd" index="4"/>
-<item historyLabel="수업.exerd" index="5"/>
-<item historyLabel="순공학테스트트.exerd" index="6"/>
-<item historyLabel="수업.exerd" index="5"/>
-<item historyLabel="firstERD.exerd" index="7"/>
-<item historyLabel="수업.exerd" index="5"/>
-<item historyLabel="firstERD.exerd" index="7"/>
-<item historyLabel="순공학테스트트.exerd" index="8"/>
-<item historyLabel="firstERD.exerd" index="7"/>
-<item historyLabel="교사.exerd" index="9"/>
-<item historyLabel="21-11-26.exerd" index="10"/>
-<item historyLabel="erd21-11-27.exerd" index="11"/>
-<item historyLabel="21-11-26.exerd" index="10"/>
-<item historyLabel="erd21-11-27.exerd" index="11"/>
-<item historyLabel="21-11-26.exerd" index="10"/>
-<item historyLabel="erd21-11-27.exerd" index="11"/>
-<item historyLabel="21-11-26.exerd" index="10"/>
-<item historyLabel="erd21-11-27.exerd" index="11"/>
-<item historyLabel="firstERD.exerd" index="12"/>
-<item historyLabel="erd21-11-27.exerd(읽기 전용)" index="11"/>
-<item historyLabel="21-11-26.exerd" index="13"/>
-<item historyLabel="erd21-11-27.exerd(읽기 전용)" index="11"/>
-<item historyLabel="21-11-27황현우.exerd" index="14"/>
-<item historyLabel="erd21-11-27.exerd(읽기 전용)" index="11"/>
-<item historyLabel="21-11-27황현우.exerd" index="14"/>
-<item historyLabel="21-11-28.exerd" index="15"/>
-<item historyLabel="21-11-27황현우.exerd" index="14"/>
-<item historyLabel="21-11-28.exerd" index="15"/>
-<item historyLabel="21-11-27황현우.exerd" index="14"/>
-<item historyLabel="21-11-28.exerd" index="15"/>
-<item historyLabel="21-11-27황현우.exerd" index="14"/>
-<item historyLabel="21-11-28.exerd" index="15"/>
-<item historyLabel="5조 erd 최종안.exerd" index="16"/>
-<item active="true" historyLabel="5조 erd 진짜 최종안.exerd" index="17"/>
+<item historyLabel="hr.exerd" index="2"/>
+<item historyLabel="수업.exerd" index="1"/>
+<item historyLabel="hr.exerd" index="2"/>
+<item historyLabel="순공학테스트트.exerd" index="3"/>
+<item historyLabel="hr.exerd" index="2"/>
+<item historyLabel="순공학테스트트.exerd" index="3"/>
+<item historyLabel="수업.exerd" index="4"/>
+<item historyLabel="순공학테스트트.exerd" index="3"/>
+<item historyLabel="수업.exerd" index="4"/>
+<item historyLabel="순공학테스트트.exerd" index="5"/>
+<item historyLabel="수업.exerd" index="4"/>
+<item historyLabel="firstERD.exerd" index="6"/>
+<item historyLabel="수업.exerd" index="4"/>
+<item historyLabel="firstERD.exerd" index="6"/>
+<item historyLabel="순공학테스트트.exerd" index="7"/>
+<item historyLabel="firstERD.exerd" index="6"/>
+<item historyLabel="교사.exerd" index="8"/>
+<item historyLabel="21-11-26.exerd" index="9"/>
+<item historyLabel="erd21-11-27.exerd" index="10"/>
+<item historyLabel="21-11-26.exerd" index="9"/>
+<item historyLabel="erd21-11-27.exerd" index="10"/>
+<item historyLabel="21-11-26.exerd" index="9"/>
+<item historyLabel="erd21-11-27.exerd" index="10"/>
+<item historyLabel="21-11-26.exerd" index="9"/>
+<item historyLabel="erd21-11-27.exerd" index="10"/>
+<item historyLabel="firstERD.exerd" index="11"/>
+<item historyLabel="erd21-11-27.exerd(읽기 전용)" index="10"/>
+<item historyLabel="21-11-26.exerd" index="12"/>
+<item historyLabel="erd21-11-27.exerd(읽기 전용)" index="10"/>
+<item historyLabel="21-11-27황현우.exerd" index="13"/>
+<item historyLabel="erd21-11-27.exerd(읽기 전용)" index="10"/>
+<item historyLabel="21-11-27황현우.exerd" index="13"/>
+<item historyLabel="21-11-28.exerd" index="14"/>
+<item historyLabel="21-11-27황현우.exerd" index="13"/>
+<item historyLabel="21-11-28.exerd" index="14"/>
+<item historyLabel="21-11-27황현우.exerd" index="13"/>
+<item historyLabel="21-11-28.exerd" index="14"/>
+<item historyLabel="21-11-27황현우.exerd" index="13"/>
+<item historyLabel="21-11-28.exerd" index="14"/>
+<item historyLabel="5조 erd 최종안.exerd" index="15"/>
+<item historyLabel="5조 erd 진짜 최종안.exerd" index="16"/>
+<item historyLabel="파일생성순.exerd" index="17"/>
+<item historyLabel="5조 erd 최종안.exerd" index="18"/>
+<item historyLabel="21-11-26.exerd" index="19"/>
+<item historyLabel="파일생성순.exerd" index="20"/>
+<item historyLabel="5조 erd 최종안.exerd" index="18"/>
+<item historyLabel="파일생성순.exerd" index="20"/>
+<item active="true" historyLabel="5조 erd 진짜 최종안.exerd" index="21"/>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
@@ -282,6 +295,9 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.tomato.exerd.editor.DiagramEditor" name="파일생성순.exerd" tooltip="erd/5TeamProject/파일생성순.exerd">
+<persistable path="/erd/5TeamProject/파일생성순.exerd"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.tomato.exerd.editor.DiagramEditor" name="5조 erd 진짜 최종안.exerd" tooltip="erd/5TeamProject/5조 erd 진짜 최종안.exerd">
 <persistable path="/erd/5TeamProject/5조 erd 진짜 최종안.exerd"/>
 </file>
