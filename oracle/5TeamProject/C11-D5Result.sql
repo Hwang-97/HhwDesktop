@@ -28,7 +28,7 @@ commit;
 --1 . 조회
 begin
 --                      ID          PW
-    PTCounselSearch('tpdls1990',1234927);
+    ProTCounselSearch('tpdls1990',1234927);
 end;
 --------------------------------------------------C-12 상담 신청자 조회--------------------------------------------------------
 rollback;
@@ -37,12 +37,12 @@ commit;
 --1. 기본 정보 조회
 begin
 --                          ID        PW
-    PSAccountBasicSearch('qrs102','2325740');
+    ProSAccountBasicSearch('qrs102','2325740');
 end;
 --2. 현재 수강중인 과정 및 과정명 ,담당 교사 ,기간 등 확인.
 begin
 --                          ID        PW
-    PSAccountSugangSearch('qrs102','2325740');
+    ProSAccountSugangSearch('qrs102','2325740');
 end;
 -------------------------------------------------------D-01 계정-------------------------------------------------------------
 rollback;
@@ -51,34 +51,32 @@ commit;
 -- 1.현재 수강중인 과정명과 과목명 , 과목별 기간을 출력
 begin
 --                              ID        PW
-    PSGradeCheckclassSearch('qrs102','2325740');
+    ProSGradeCheckclassSearch('qrs102','2325740');
 end;
 -- 2.전체 or 과목 선택 후 시험 정보 조회
 begin
 --                                ID        PW     과목명 / 빈칸 입력시 전체 조회
-    PSGradeCheckclassSelSearch('qrs102','2325740','자바');
+    ProSGradeCheckclassSelSearch('qrs102','2325740','');
 end;
-drop procedure PSGradeCheckclassFullSearch;
 -----------------------------------------------------D-02 성적 조회-----------------------------------------------------------
 rollback;
 commit;
 -------------------------------------------------------D-03 출결-------------------------------------------------------------
-drop procedure PSAttendFullSearch;
 -- 1. 본인 출결 전체 및 날짜별 조회
 begin
 --                       ID       PW
-    PSAttendSelSearch('qrs102','2325740','');
+    ProSAttendSelSearch('qrs102','2325740','');
 end;
 -- 2. 출결 입력
 -------2-1. 출근
 begin
 --               ID         PW
-    PSGoTowork('qrs102','2325740');
+    ProSGoTowork('qrs102','2325740');
 end;
 -------2-2. 퇴근
 begin
 --               ID         PW
-    PSOffWork('qrs102','2325740');
+    ProSOffWork('qrs102','2325740');
 end;
 -------------------------------------------------------D-03 출결-------------------------------------------------------------
 rollback;
@@ -87,12 +85,12 @@ commit;
 -- 1. 작성
 begin
 --                   ID       PW             질문 내용 작성  
-    PSQuesrionadd('qrs102','2325740','프로시저 질문 가능한지 테스트');
+    ProSQuesrionadd('qrs102','2325740','프로시저 질문 가능한지 테스트');
 end;
 -- 2. 조회
 begin
 --                      ID        PW
-    PSQuestionSearch('qrs102','2325740');
+    ProSQuestionSearch('qrs102','2325740');
 end;
 ---------------------------------------------------D-04 Q&A 작성------------------------------------------------------
 rollback;
@@ -101,7 +99,7 @@ commit;
 -- 1. 선생님 or 관리자 상담신청
 begin
 --                   ID      PW  상담대상(선생님/관리자)   상담내용
-    PSCounselAdd('qrs102','2325740','선생님','프로시저 테스트 중 입니다.');
+    ProSCounselAdd('qrs102','2325740','선생님','프로시저 테스트 중 입니다.');
 end;
 -- 확인용
 select * from tblCounsel where sugang_seq =6 and teacher_seq =11 and target = '선생님';
@@ -110,20 +108,5 @@ select * from tblCounsel where sugang_seq =6 and manager_seq =1 and target = '�
 rollback;
 commit;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+select * from tblassessment where assessment_seq = 9;
 

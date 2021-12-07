@@ -528,10 +528,10 @@ INSERT INTO TBLSTUDENT (STUDENT_SEQ, NAME, ID, SSN, TEL, ATTENDDATE, MANAGER_SEQ
 INSERT INTO TBLSTUDENT (STUDENT_SEQ, NAME, ID, SSN, TEL, ATTENDDATE, MANAGER_SEQ) VALUES (99,'황세인','zeq128','8901031999859','010-8415-3907',to_date('2021-09-04', 'RRRR-MM-DD'),3);
 INSERT INTO TBLSTUDENT (STUDENT_SEQ, NAME, ID, SSN, TEL, ATTENDDATE, MANAGER_SEQ) VALUES (100,'서영연','nwj547','9306281715128','010-7462-2677',to_date('2021-02-09', 'RRRR-MM-DD'),3);
 
-select * from tblStudent;
+--select * from tblStudent;
 
 --LClass
-delete from tbllclass;
+--delete from tbllclass;
 
 
 insert into tblLClass (LClass_seq, StartClassDate, FinishClassDate, Class_Seq, Classroom_Seq)values (1, '2021-09-16', '2022-03-16', 1, 1);
@@ -685,7 +685,7 @@ INSERT INTO tblLsubject(LSubject_Seq, start_date, end_date, subject_Seq, BookNam
 
 
 -----
-select * from tbllsubject;
+--select * from tbllsubject;
 
 --Salary
 
@@ -970,7 +970,7 @@ insert into tblTcAttendance values (156, '정상', '2021-12-02', 11);
 insert into tblTcAttendance values (157, '정상', '2021-12-03', 11);
 insert into tblTcAttendance values (158, '정상', '2021-12-06', 11);
 insert into tblTcAttendance values (159, '정상', '2021-12-07', 11);
-select * from tbltcAttendance;
+--select * from tbltcAttendance;
 
 --Sugang
 
@@ -1077,7 +1077,7 @@ INSERT INTO tblSugang(Sugang_Seq, LClass_Seq, Student_Seq)Values (98, 5,98);
 INSERT INTO tblSugang(Sugang_Seq, LClass_Seq, Student_Seq)Values (99, 10,99);
 INSERT INTO tblSugang(Sugang_Seq, LClass_Seq, Student_Seq)Values (100, 8,100);
 
-select * from tblSugang;
+--select * from tblSugang;
 
 --test
 
@@ -1193,7 +1193,7 @@ INSERT INTO TBLTEST (TEST_SEQ, QUESTION, KIND_OF, LSUBJECT_SEQ) VALUES (106,'HTM
 INSERT INTO TBLTEST (TEST_SEQ, QUESTION, KIND_OF, LSUBJECT_SEQ) VALUES (107,'자바스프링필기문제','필기',28);
 INSERT INTO TBLTEST (TEST_SEQ, QUESTION, KIND_OF, LSUBJECT_SEQ) VALUES (108,'자바스프링실기문제','실기',28);
 
-select * from tbltest;
+--select * from tbltest;
 
 --Graduate
 
@@ -1401,7 +1401,7 @@ insert into tblGraduate(Graduate_seq,name,id,last_ssn,phoneNumber,complationDate
 insert into tblGraduate(Graduate_seq,name,id,last_ssn,phoneNumber,complationDate,employment,salary,sugang_seq) 
                         values (101,'김멘토','kmt547','2336407','010-1233-2245','2021-05-23','당근',30000000,41);
 
-select * from tblGraduate;
+--select * from tblGraduate;
 --SugangState
 ------------------------------------------------------------------
 insert into tblSugangState(SugangState_Seq, SugangState_Date, whether, Sugang_Seq) values(1,null,'N',1);
@@ -1505,7 +1505,7 @@ insert into tblSugangState(SugangState_Seq, SugangState_Date, whether, Sugang_Se
 insert into tblSugangState(SugangState_Seq, SugangState_Date, whether, Sugang_Seq) values(99,'2021-02-08','Y',99);
 insert into tblSugangState(SugangState_Seq, SugangState_Date, whether, Sugang_Seq) values(100,'2021-05-11','Y',100);
 commit;
-SELECT * FROM TBLSUGANGSTATE;
+--SELECT * FROM TBLSUGANGSTATE;
 
 --Attendence
 insert into tblAttendence(Attendence_Seq,absence_type,Attendence_Date,Sugang_Seq,GoTowork,offWork) 
@@ -2768,7 +2768,7 @@ insert into tblEdu_Subsidy(Edu_Subsidy_Seq, Edu_Subsidy_Date, period,  Sugang_Se
 insert into tblEdu_Subsidy(Edu_Subsidy_Seq, Edu_Subsidy_Date, period,  Sugang_Seq ) values(111,14,1,6);
 insert into tblEdu_Subsidy(Edu_Subsidy_Seq, Edu_Subsidy_Date, period,  Sugang_Seq ) values(112,18,2,6);
 
-select * from tblEdu_Subsidy;
+--select * from tblEdu_Subsidy;
 --ProBoard
 
 --proBoard 더미
@@ -2802,7 +2802,7 @@ INSERT INTO TBLPROBOARD (PROBOARD_SEQ, PROJECT_NAME, CONTENT, PERIOD, LIMIT, EMA
 
 commit;
 
-select * from TBLPROBOARD;
+--select * from TBLPROBOARD;
 
 --GisuBoard
 
@@ -2920,7 +2920,7 @@ insert into tblGisuBoard(GisuBoard_Seq, title, GisuBoard_Date, Sugang_Seq) value
 
 commit;
 
-select * from tblGisuBoard;
+--select * from tblGisuBoard;
 --content
 
 insert into tblContent(content_seq,content,gisuBoard_seq) values (1,'다들 취업은 어디로 하셨나요?? 실무에서도 이렇게 하나요?? 인원 구해요~!',100) ;
@@ -3037,7 +3037,7 @@ insert into tblContent(content_seq,content,gisuBoard_seq) values (110,'아직 �
 
 commit;
 
-select * from tblContent
+--select * from tblContent
 --con-comment
 
 insert into tblcon_Comment(con_comment_seq,content,reg_time,content_seq) values (1,'콘서트.가서 맡은 화약냄새가 아직두 나여 빨리 콘서트.가고싶당','2021-06-27',86);
@@ -3155,7 +3155,7 @@ insert into tblcon_Comment(con_comment_seq,content,reg_time,content_seq) values 
 
 commit;
 
-select * from tblcon_Comment;
+--select * from tblcon_Comment;
 --com-comment(대댓글)
 
 insert into tblCom_Comment(Com_Comment_seq,content,reg_time,con_comment_seq) values (1,'벌써 점심이네요..','2021-11-15',57) ;
@@ -3272,7 +3272,7 @@ insert into tblCom_Comment(Com_Comment_seq,content,reg_time,con_comment_seq) val
 
 commit;
 
-select * from tblCom_Comment;
+--select * from tblCom_Comment;
 --wishJob
 
 --WishJob더미
@@ -3380,7 +3380,7 @@ INSERT INTO TBLWISHJOB (WISHJOB_SEQ, CITY, BASICPAY, STUDENT_SEQ) VALUES (100,'�
 
 commit;
 
-select * from TBLWISHJOB;
+--select * from TBLWISHJOB;
 --StudentSpec
 
 insert into tblStudentspec(student_seq , Education , certificate ) values (1, '대졸', 'OCP,빅데이터 분석기사,빅데이터 분석기사,정보처리 기사') ;
@@ -3485,7 +3485,7 @@ insert into tblStudentspec(student_seq , Education , certificate ) values (99, '
 insert into tblStudentspec(student_seq , Education , certificate ) values (100, '고졸', '컴활,네트워크 관리사,정보처리 기사,OCM') ;
 commit;
 
-select * from tblStudentspec;
+--select * from tblStudentspec;
 --Counsel
 
 insert into tblcounsel values (1, '선생님', '공부 상담', '2021-09-12', 1, 5, 2);
@@ -3598,7 +3598,7 @@ insert into tblCounsel values(106, '선생님', '고민상담', '2021-12-17',6, 
 
 commit;
 
-select * from tblCounsel;
+--select * from tblCounsel;
 
 --assessement
 
@@ -3828,7 +3828,7 @@ insert into tblassessment(assessment_seq , contents , regdate , sugang_seq , tea
                         values (108, '선생님 수업듣고 병이 나았습니다.' , '2021-01-28' ,85 ,11);   						  
 commit;
 
-select * from tblassessment;
+--select * from tblassessment;
 
 --team
 insert into tblTeam values (1, 1, 1);
@@ -3934,7 +3934,7 @@ insert into tblTeam values (100, 5, 100);
 
 commit;
 
-select * from tblTeam;
+--select * from tblTeam;
 --Mentoring
 
 insert into tblMentoring (Mento_seq ,Graduate_seq ,student_seq) values (1,43,1);
@@ -4044,7 +4044,7 @@ insert into tblMentoring (Mento_seq ,Graduate_seq ,student_seq) values (100,71,4
 
 commit;
 
-select * from tblMentoring;
+--select * from tblMentoring;
 --CovidT
 
 INSERT INTO tblCovidT(CovidT_Seq, attendance, facetoface, Teacher_Seq) Values (1, '21-01-01', 'N', 2) ;
@@ -4160,7 +4160,7 @@ INSERT INTO tblCovidT(CovidT_Seq, attendance, facetoface, Teacher_Seq) Values (1
 
 commit;
 
-select * from tblCovidT;
+--select * from tblCovidT;
 --CovidS
 
 tblCovidS.sql
@@ -4527,7 +4527,7 @@ INSERT INTO tblCovidS(CovidS_Seq, attendance, facetoface , Sugang_seq) VALUES(45
 
 commit;
 
-select * from tblCovidS;
+--select * from tblCovidS;
 --Question
 
 insert into tblQuestion values (1, 'sql 구분(문법) 순서가 어떻게 되나요?', '2021-09-10', 1);
@@ -4633,7 +4633,7 @@ insert into tblQuestion values (100, '수업 계속 들을지 고민입니다...
 
 commit;
 
-select * from tblQuestion;
+--select * from tblQuestion;
 --Answer
 
 tblAnswerDummy.sql
@@ -4741,7 +4741,7 @@ insert into tblAnswer values (100, '키보드는 해피해커 무접점을 사�
 
 commit;
 
-select * from tblAnswer;
+--select * from tblAnswer;
 
 
 

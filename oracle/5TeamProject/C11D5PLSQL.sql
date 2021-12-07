@@ -33,6 +33,7 @@ is
     name tblstudent.name%type;
     seq number;
     team number null;
+    vcheck number;
     cursor vcursor is select 
                             DISTINCT(s.name),
                             su.sugang_seq,
@@ -42,18 +43,27 @@ is
                                                 inner join tblsugang su on su.lclass_seq = lc.class_seq
                                                 inner join tblstudent s on s.student_seq = su.student_seq
                                                 left outer join tblteam team on team.sugang_seq = su.sugang_seq
-                            where t.teacher_seq = (select teacher_seq from tblteacher where pid = id and jumin = ppw);
+                            where t.teacher_seq = (select teacher_seq from tblteacher where pid = id and jumin = ppw)
+                            order by sugang_seq asc;
 begin
+    select teacher_seq into vcheck from tblteacher where teacher_seq = (select teacher_seq from tblteacher where pid = id and jumin = ppw);
     open vcursor;
         loop
             fetch vcursor into name , seq , team;
             exit when vcursor%notfound;
-            dbms_output.put_line('이름:'||name || ' | 수강 번호: ' || seq || ' | 팀: ' || team);
+            dbms_output.put_line('=========================================================================================================================================================================================');
+            dbms_output.put_line('이름:'||name || '  수강 번호: ' || seq || '  팀: ' || team);
         end loop;
     close vcursor;
+    dbms_output.put_line('=========================================================================================================================================================================================');
+exception
+    when others then
+    dbms_output.put_line('              권한이 없습니다. 로그인 정보를 다시 확인하세요');
+    dbms_output.put_line('');
+    dbms_output.put_line('          ================================================');
 end;
 
---2 추가
+--2 수정
 create or replace procedure proTTeamFormationChange(
    pid  in tblteacher.id % type,
    ppw  in tblteacher.jumin % type,
@@ -71,8 +81,15 @@ begin
     select teacher_seq into seq from tblteacher where teacher_seq = (select teacher_seq from tblteacher where id = pid and jumin = ppw);
     if seq>0 then
         UPDATE tblteam set team = t WHERE sugang_seq in(student1,student2,student3,student4,student5,student6);
+        dbms_output.put_line('=========================================================================================================================================================================================');
         dbms_output.put_line('완료');
+        dbms_output.put_line('=========================================================================================================================================================================================');
     end if;
+exception
+    when others then
+    dbms_output.put_line('              권한이 없습니다. 로그인 정보를 다시 확인하세요');
+    dbms_output.put_line('');
+    dbms_output.put_line('          ================================================');
 end;
 --3 삭제
 create or replace procedure proTTeamFormationRemove(
@@ -92,10 +109,15 @@ begin
     select teacher_seq into seq from tblteacher where teacher_seq = (select teacher_seq from tblteacher where id = pid and jumin = ppw);
     if seq>0 then
         delete from tblteam where sugang_seq in(student1,student2,student3,student4,student5,student6);
+        dbms_output.put_line('=========================================================================================================================================================================================');
         dbms_output.put_line('완료');
-    else
-        dbms_output.put_line('ID 또는 PW 워드가  틀립니다.');
-    end if;
+        dbms_output.put_line('=========================================================================================================================================================================================');
+   end if;
+exception
+    when others then
+    dbms_output.put_line('              권한이 없습니다. 로그인 정보를 다시 확인하세요');
+    dbms_output.put_line('');
+    dbms_output.put_line('          ================================================');
 end;
 --4 추가 
 create or replace procedure proTTeamFormationAdd(
@@ -111,28 +133,100 @@ create or replace procedure proTTeamFormationAdd(
 )
 is
     seq number:=0;
+    vcheck1 number:=0;
+    vcheck2 number:=0;
+    vcheck3 number:=0;
+    vcheck4 number:=0;
+    vcheck5 number:=0;
+    vcheck6 number:=0;
 begin
-    
     select teacher_seq into seq from tblteacher where teacher_seq = (select teacher_seq from tblteacher where id = pid and jumin = ppw);
+    select count(*) into vcheck1 from tblteam where sugang_seq = student1;
+    select count(*) into vcheck2 from tblteam where sugang_seq = student2;
+    select count(*) into vcheck3 from tblteam where sugang_seq = student3;
+    select count(*) into vcheck4 from tblteam where sugang_seq = student4;
+    select count(*) into vcheck5 from tblteam where sugang_seq = student5;
+    select count(*) into vcheck6 from tblteam where sugang_seq = student6;
     if seq>0 then
-        insert into tblTeam VALUES ((select team_seq+1 from(select team_seq from tblteam order by team_seq desc) where rownum = 1),t,student1);
-        insert into tblTeam VALUES ((select team_seq+1 from(select team_seq from tblteam order by team_seq desc) where rownum = 1),t,student2);
-        insert into tblTeam VALUES ((select team_seq+1 from(select team_seq from tblteam order by team_seq desc) where rownum = 1),t,student3);
-        insert into tblTeam VALUES ((select team_seq+1 from(select team_seq from tblteam order by team_seq desc) where rownum = 1),t,student4);
-        insert into tblTeam VALUES ((select team_seq+1 from(select team_seq from tblteam order by team_seq desc) where rownum = 1),t,student5);
-        insert into tblTeam VALUES ((select team_seq+1 from(select team_seq from tblteam order by team_seq desc) where rownum = 1),t,student6);
-        dbms_output.put_line('완료');
-    else
-        dbms_output.put_line('ID 또는 PW 워드가  틀립니다.');
+        if vcheck1 = 0 then
+            insert into tblTeam VALUES ((select team_seq+1 from(select team_seq from tblteam order by team_seq desc) where rownum = 1),t,student1);
+            dbms_output.put_line('=========================================================================================================================================================================================');
+            dbms_output.put_line('sugang_seq : '||student1||' 학생 추가 완료');
+            dbms_output.put_line('=========================================================================================================================================================================================');
+        else
+            dbms_output.put_line('=========================================================================================================================================================================================');
+            dbms_output.put_line('sugang_seq : '||student1||' 학생 은 이미 팀이 구성되어 있습니다.');
+            dbms_output.put_line('=========================================================================================================================================================================================');
+        end if;
+        if vcheck2 = 0 then
+            insert into tblTeam VALUES ((select team_seq+1 from(select team_seq from tblteam order by team_seq desc) where rownum = 1),t,student2);
+            dbms_output.put_line('=========================================================================================================================================================================================');
+            dbms_output.put_line('sugang_seq : '||student2||' 학생 추가 완료');
+            dbms_output.put_line('=========================================================================================================================================================================================');
+        else
+            dbms_output.put_line('=========================================================================================================================================================================================');
+            dbms_output.put_line('sugang_seq : '||student2||' 학생 은 이미 팀이 구성되어 있습니다.');
+            dbms_output.put_line('=========================================================================================================================================================================================');
+        
+        end if;
+        if vcheck3 = 0 then
+            insert into tblTeam VALUES ((select team_seq+1 from(select team_seq from tblteam order by team_seq desc) where rownum = 1),t,student3);
+            dbms_output.put_line('=========================================================================================================================================================================================');
+            dbms_output.put_line('sugang_seq : '||student3||' 학생 추가 완료');
+            dbms_output.put_line('=========================================================================================================================================================================================');
+        else
+            dbms_output.put_line('=========================================================================================================================================================================================');
+            dbms_output.put_line('sugang_seq : '||student3||' 학생 은 이미 팀이 구성되어 있습니다.');
+            dbms_output.put_line('=========================================================================================================================================================================================');
+        
+        end if;
+        if vcheck4 = 0 then
+            insert into tblTeam VALUES ((select team_seq+1 from(select team_seq from tblteam order by team_seq desc) where rownum = 1),t,student4);
+            dbms_output.put_line('=========================================================================================================================================================================================');
+            dbms_output.put_line('sugang_seq : '||student4||' 학생 추가 완료');
+            dbms_output.put_line('=========================================================================================================================================================================================');
+        else
+            dbms_output.put_line('=========================================================================================================================================================================================');
+            dbms_output.put_line('sugang_seq : '||student4||' 학생 은 이미 팀이 구성되어 있습니다.');
+            dbms_output.put_line('=========================================================================================================================================================================================');
+        
+        end if;
+        if vcheck5 = 0 then
+            insert into tblTeam VALUES ((select team_seq+1 from(select team_seq from tblteam order by team_seq desc) where rownum = 1),t,student5);
+            dbms_output.put_line('=========================================================================================================================================================================================');
+            dbms_output.put_line('sugang_seq : '||student5||' 학생 추가 완료');
+            dbms_output.put_line('=========================================================================================================================================================================================');
+        else
+            dbms_output.put_line('=========================================================================================================================================================================================');
+            dbms_output.put_line('sugang_seq : '||student5||' 학생 은 이미 팀이 구성되어 있습니다.');
+            dbms_output.put_line('=========================================================================================================================================================================================');
+        
+        end if;
+        if vcheck6 = 0 then
+            insert into tblTeam VALUES ((select team_seq+1 from(select team_seq from tblteam order by team_seq desc) where rownum = 1),t,student6);
+            dbms_output.put_line('=========================================================================================================================================================================================');
+            dbms_output.put_line('sugang_seq : '||student6||' 학생 추가 완료');
+            dbms_output.put_line('=========================================================================================================================================================================================');
+        else
+            dbms_output.put_line('=========================================================================================================================================================================================');
+            dbms_output.put_line('sugang_seq : '||student6||' 학생 은 이미 팀이 구성되어 있습니다.');
+            dbms_output.put_line('=========================================================================================================================================================================================');
+        
+        end if;
     end if;
+exception
+    when others then
+    dbms_output.put_line('              권한이 없습니다. 로그인 정보를 다시 확인하세요');
+    dbms_output.put_line('');
+    dbms_output.put_line('          ================================================');
 end;
-
+set serveroutput on;
 -- 실행
 begin
     proTTeamFormationSearch('tpdls1990',1234927);
 end;
 begin
-    proTTeamFormationChange('tpdls1990',1234927, 1 ,1,2,3,4,5,6);
+    proTTeamFormationChange('tpdls1990',1234927, 10 ,1,2,3,4,5,6);
 end;
 begin
     proTTeamFormationremove('tpdls1990',1234927,1,2,3,4,5,6);
@@ -140,6 +234,7 @@ end;
 begin
     proTTeamFormationAdd('tpdls1990',1234927,10,1,2,3,4,5,6);
 end;
+select * from tblteam;
 ---------------------------------------------------C-11 교육생 팀편성-------------------------------------------------------
 rollback;
 commit;
@@ -155,11 +250,12 @@ commit;
 
 --pl/Sql
 --1 . 조회
-create or replace procedure PTCounselSearch(
+create or replace procedure ProTCounselSearch(
     pid  in tblteacher.id % type,
     ppw  in tblteacher.jumin % type
 )
 is
+    seq number;
     d date;
     name tblstudent.name%type;
     class tblclass.name%type;
@@ -181,18 +277,25 @@ is
                                   t.teacher_seq = (select teacher_seq from tblteacher where id = pid and jumin = ppw)
                             order by con.counsel_date ; -- 현재 로그인된 교사의 개설 과정을 수강 중인 학생의 상담내역 확인
 begin
+    select teacher_seq into seq from tblteacher where teacher_seq = (select teacher_seq from tblteacher where id = pid and jumin = ppw);
     open vcursor;
         LOOP
             fetch vcursor into d,name,class,room,counsel;
             exit when vcursor%notfound;
+            dbms_output.put_line('=========================================================================================================================================================================================');
             dbms_output.put_line('날짜 : ' || to_char(d,'yyyy-mm-dd')||' 이름: '||name||' 과정명 : '||class||' 강의실: '||room||' 상담 신청 내용: '|| counsel );
+            dbms_output.put_line('=========================================================================================================================================================================================');
         end loop;
     close vcursor;
+exception
+    when others then
+    dbms_output.put_line('              권한이 없습니다. 로그인 정보를 다시 확인하세요');
+    dbms_output.put_line('');
+    dbms_output.put_line('          ================================================');
 end;
-
 -- 실행
 begin
-    PTCounselSearch('tpdls1990',1234927);
+    ProTCounselSearch('tpdls1990',1234927);
 end;
 --------------------------------------------------C-12 상담 신청자 조회--------------------------------------------------------
 commit;
@@ -216,11 +319,12 @@ commit;
 
 --pl/sql
 --1. 기본 정보 조회
-create or replace procedure PSAccountBasicSearch(
+create or replace procedure ProSAccountBasicSearch(
     pid in tblstudent.id%type,
     ppw in tblstudent.ssn%type
 )
 is  
+    vcheck number;
     vname tblstudent.name%type;
     vid tblStudent.id%type;
     vssn tblstudent.ssn%type;
@@ -247,21 +351,30 @@ is
                                                         from tblstudent 
                                                             where id = pid and substr(ssn,7) = ppw);
 begin
+    select 1 into vcheck  from tblsugang su where su.student_seq = ( select stu.student_seq from tblstudent stu where stu.id = pid and substr(stu.ssn,7) = ppw);
     open vcursor;
         loop
             fetch vcursor into vname,vid,vssn,vtel,vd,vedu,vcer,vcity,vpay;
             exit when vcursor%notfound;
+            dbms_output.put_line('=========================================================================================================================================================================================');
             dbms_output.put_line('이름 : '||vname||' |아이디 : '||vid||' |주민번호 : ' ||vssn||' |전화번호 : '||vtel||' |회원가입일 : '||vd
                                     || ' |최종학력 : '||vedu||' |자격증 : '||vcer|| ' |희망 지역 : '||vcity||' |희망 월급 : '||vpay);
+            dbms_output.put_line('=========================================================================================================================================================================================');
         end loop;
     close vcursor;
+exception
+    when others then
+    dbms_output.put_line('              권한이 없습니다. 로그인 정보를 다시 확인하세요');
+    dbms_output.put_line('');
+    dbms_output.put_line('          ================================================');
 end;
 -- 현재 수강중인 과정 및 과정명 ,담당 교사 ,기간 등 확인.
-create or replace procedure PSAccountSugangSearch(
+create or replace procedure ProSAccountSugangSearch(
     pid in tblstudent.id%type,
     ppw in tblstudent.ssn%type
 )
 is
+    vcheck number;
     vsname tblstudent.name%type;
     vclassName tblclass.name%type;
     vsubjectName tblsubject.name%type;
@@ -293,21 +406,31 @@ is
                                                         from tblstudent 
                                                             where id = pid and substr(ssn,7) = ppw);
 begin
+    select 1 into vcheck  from tblsugang su where su.student_seq = ( select stu.student_seq from tblstudent stu where stu.id = pid and substr(stu.ssn,7) = ppw);
     open vcursor;
         loop
             fetch vcursor into vsname,vclassName,vsubjectName,vbook,vsd,ved,vroom,vtName;
             exit when vcursor%notfound;
-            dbms_output.put_line('이름 : '||vsname||' 과정명 : '||vclassName||' 과목명 :    '||vsubjectName||' 책 이름 : '||vbook ||'      시작 날짜 : '|| vsd||' 강의실 : '||vroom||' 종료 날짜 : '||ved||' 선생님 : '||vtName);
+            dbms_output.put_line('=========================================================================================================================================================================================');
+            dbms_output.put_line('이름 : '||vsname||' 과정명 : '||vclassName||' 과목명 :    '||vsubjectName||' 책 이름 : '||vbook );
+            dbms_output.put_line('=========================================================================================================================================================================================');
+            dbms_output.put_line('시작 날짜 : '|| vsd||' 강의실 : '||vroom||' 종료 날짜 : '||ved||' 선생님 : '||vtName);
+            dbms_output.put_line('=========================================================================================================================================================================================');
         end loop;
     close vcursor;
+exception
+    when others then
+    dbms_output.put_line('              권한이 없습니다. 로그인 정보를 다시 확인하세요');
+    dbms_output.put_line('');
+    dbms_output.put_line('          ================================================');
 end;
                                     
 -- 실행
 begin
-    PSAccountBasicSearch('qrs102','2325740');
+    ProSAccountBasicSearch('qrs102','2325740');
 end;
 begin
-    PSAccountSugangSearch('qrs102','2325740');
+    ProSAccountSugangSearch('qrs102','2325740');
 end;
 -------------------------------------------------------D-01 계정-------------------------------------------------------------
 commit;
@@ -369,11 +492,13 @@ from tblstudent stu inner join tblsugang su on stu.student_seq = su.student_seq
 
 -- pl/sql
 -- 1.현재 수강중인 과정명과 과목명 , 과목별 기간을 출력
-create or replace procedure PSGradeCheckclassSearch(
+
+create or replace procedure ProSGradeCheckclassSearch(
     pid in tblstudent.id%TYPE,
     ppw in tblstudent.ssn%type
 )
-is
+is  
+    vcheck NUMBER;
     vclassName tblclass.name%type;
     vsubjectName tblSubject.name%type;
     vsd tbllsubject.start_date%type;
@@ -393,19 +518,26 @@ is
                                         inner join tblclassroom room on room.classroom_seq = lc.classroom_seq
                         where stu.student_seq = (select student_seq from tblstudent where id = pid and substr(ssn,7) = ppw);
 begin
+    select 1 into vcheck  from tblsugang su where su.student_seq = ( select stu.student_seq from tblstudent stu where stu.id = pid and substr(stu.ssn,7) = ppw);
     open vcursor;
         loop
             fetch vcursor into vclassName ,vsubjectName ,vsd ,ved, vroom;
             exit when vcursor%notfound;
-            dbms_output.put_line('과정명 : '||vclassName||' 과목명 : '||vsubjectName||' 시작 날짜 : '||vsd||' 종료 날짜 : '||ved||' 강의실 : '||vroom);
+            dbms_output.put_line('=========================================================================================================================================================================================');
+            dbms_output.put_line('과정명 : '||vclassName||'    과목명 : '||vsubjectName||'    시작 날짜 : '||vsd||' 종료 날짜 : '||ved||' 강의실 : '||vroom);
+            dbms_output.put_line('=========================================================================================================================================================================================');
         end loop;
     close vcursor;
+exception
+    when others then
+    dbms_output.put_line('              권한이 없습니다. 로그인 정보를 다시 확인하세요');
+    dbms_output.put_line('');
+    dbms_output.put_line('          ================================================');    
 end;
 
 
-
 -- 2.전체 or 과목 선택시 시험 정보 조회
-create or replace procedure PSGradeCheckclassSelSearch(
+create or replace procedure ProSGradeCheckclassSelSearch(
     pid in tblstudent.id%TYPE,
     ppw in tblstudent.ssn%type,
     pclassName in tblclass.name%type
@@ -435,10 +567,12 @@ is
                         t.name as "선생님 이름",
                         (select question from vwscore where sugang_seq = su.sugang_seq and kind_of = '필기' and subjectName = s.name) as "필기 문제",
                         (select testdate from vwscore where sugang_seq = su.sugang_seq and kind_of = '필기' and subjectName = s.name) as "필기 시험 날짜",
-                        (select score from vwscore where sugang_seq = su.sugang_seq and kind_of = '필기' and subjectName = s.name) as "필기점수",
+                        CASE WHEN (select score from vwscore where sugang_seq = su.sugang_seq and kind_of = '필기' and subjectName = s.name) <> 0 THEN (select score from vwscore where sugang_seq = su.sugang_seq and kind_of = '필기' and subjectName = s.name) 
+                             ELSE 0 END as "필기점수",
                         (select question from vwscore where sugang_seq = su.sugang_seq and kind_of = '실기' and subjectName = s.name) as "실기 문제",
                         (select testdate from vwscore where sugang_seq = su.sugang_seq and kind_of = '실기' and subjectName = s.name) as "실기 시험 날짜",
-                        (select score from vwscore where sugang_seq = su.sugang_seq and kind_of = '실기' and subjectName = s.name) as "실기점수",
+                        CASE WHEN (select score from vwscore where sugang_seq = su.sugang_seq and kind_of = '실기' and subjectName = s.name) <> 0 THEN (select score from vwscore where sugang_seq = su.sugang_seq and kind_of = '실기' and subjectName = s.name)
+                             ELSE 0 END as "실기점수",
                         (select score from vwattendencescore where sugang_seq = su.sugang_seq) as "출석"
                     from tblstudent stu inner join tblsugang su on stu.student_seq = su.student_seq
                                         inner join tbllclass lc on lc.lclass_seq = su.lclass_seq
@@ -449,28 +583,37 @@ is
                                         inner join tblteacher T on t.teacher_seq = ls.teacher_seq
                         where su.sugang_seq  = (select student_seq from tblstudent where id = pid and substr(ssn,7) = ppw) and s.name like '%'||pclassName;
 begin
-    dbms_output.put_line('▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒');
     open vcursor;
         loop
             fetch vcursor into studentName, className ,subjectName ,startDate ,endDate ,bookName ,teacherName ,pQuestion ,pTestDate ,pTestScore ,sQuestion ,sTestDate ,stestScore ,attend;
             exit when vcursor%notfound;
+                dbms_output.put_line('=========================================================================================================================================================================================');
                 dbms_output.put_line('이름 : '||studentName||' 과정명 : '||className ||' 과목명 : '||subjectName ||' 과목 시작 날짜 : '||startDate ||' 과목 종료 날짜 : '||endDate 
                 );
+                dbms_output.put_line('=========================================================================================================================================================================================');
                 dbms_output.put_line('      교재 이름 : '||bookName ||' 교사 이름 : '||teacherName );
-                dbms_output.put_line('      필기 문제 : '||pQuestion ||' 필기 시험 날짜 : '||pTestDate ||' 필기 점수 : '||pTestScore );
-                dbms_output.put_line('      실기 문제 : '||sQuestion ||' 실기 시험 날짜 : '||sTestDate ||' 실기 점수 : '||stestScore );
+                dbms_output.put_line('=========================================================================================================================================================================================');
+                dbms_output.put_line('      필기 문제 : '||pQuestion ||' 필기 시험 날짜 : '||pTestDate ||' 필기 점수 : '||pTestScore ||' 점');
+                dbms_output.put_line('=========================================================================================================================================================================================');
+                dbms_output.put_line('      실기 문제 : '||sQuestion ||' 실기 시험 날짜 : '||sTestDate ||' 실기 점수 : '||stestScore ||' 점');
+                dbms_output.put_line('=========================================================================================================================================================================================');
                 dbms_output.put_line('      현재 출석 점수 : '||attend);
-                dbms_output.put_line('▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒');
+                dbms_output.put_line('=========================================================================================================================================================================================');
         end loop;
     close vcursor;
+exception
+    when others then
+    dbms_output.put_line('              권한이 없습니다. 로그인 정보를 다시 확인하세요');
+    dbms_output.put_line('');
+    dbms_output.put_line('          ================================================');  
 end;
            
 -- 실행
 begin
-    PSGradeCheckclassSearch('qrs102','2325740');
+    ProSGradeCheckclassSearch('qrs102','2325740');
 end;
 begin
-    PSGradeCheckclassSelSearch('qrs102','2325740','HTML');
+    ProSGradeCheckclassSelSearch('qrs102','2325740','');
 end;
 -----------------------------------------------------D-02 성적 조회-----------------------------------------------------------
 commit;
@@ -493,13 +636,13 @@ rollback;
 -- PW : 2325740
 
 -- 1. 본인 출결 전체 및 날짜별 조회
-drop procedure PSAttendFullSearch;
-create or replace procedure PSAttendSelSearch(
+create or replace procedure ProSAttendSelSearch(
     pid in tblstudent.id%type,
     ppw in tblstudent.ssn%type,
     psel in varchar2
 )
 is  
+    vcheck NUMBER;
     studentName tblstudent.name%type;
     attendDate tblattendence.attendence_date%type;
     absenceType tblattendence.absence_type%type;
@@ -516,18 +659,26 @@ is
                             where   to_char(at.attendence_date ,'yyyy-mm-dd')like (psel||'%') and
                                     stu.student_seq = (select stu.student_seq from tblstudent stu where stu.id = pid and substr(stu.ssn,7) = ppw); -- 로그인 후 학생 번호를 돌려주는 쿼리
 begin
+    select 1 into vcheck  from tblsugang su where su.student_seq = ( select stu.student_seq from tblstudent stu where stu.id = pid and substr(stu.ssn,7) = ppw);
     open vcursor;
         LOOP
             fetch vcursor into studentName ,attendDate  ,absenceType ,vGoToWork ,vOffWork;
             exit when vcursor%notfound;
+            dbms_output.put_line('=========================================================================================================================================================================================');
             dbms_output.put_line(' 이름 : '||studentName||' | 출석 '||attendDate||' | 출결 종류 : '||absenceType||' | 입실 시간 : '||vGoToWork||' | 퇴실 시간 : '||vOffWork);
+            dbms_output.put_line('=========================================================================================================================================================================================');
         end loop;
     close vcursor;
+exception
+    when others then
+    dbms_output.put_line('              권한이 없습니다. 로그인 정보를 다시 확인하세요');
+    dbms_output.put_line('');
+    dbms_output.put_line('          ================================================');  
 end;
 
 -- 3. 출결 입력
 -------1. 출근
-create or replace procedure PSGoTowork(
+create or replace procedure ProSGoTowork(
     pid in tblstudent.id%type,
     ppw in tblstudent.ssn%type
 )
@@ -548,14 +699,19 @@ begin
             sysdate
         from tblsugang su
             where su.student_seq = ( select stu.student_seq from tblstudent stu where stu.id = pid and substr(stu.ssn,7) = ppw) ;
+        dbms_output.put_line('=========================================================================================================================================================================================');
         dbms_output.put_line('출근완료');
-    else 
-        dbms_output.put_line('아이디 또는 비밀번호가 틀렸습니다.');
+        dbms_output.put_line('=========================================================================================================================================================================================');
     end if;
+exception
+    when others then
+    dbms_output.put_line('              권한이 없습니다. 로그인 정보를 다시 확인하세요');
+    dbms_output.put_line('');
+    dbms_output.put_line('          ================================================');  
 end;
- 
+
 -------2. 퇴근
-create or replace procedure PSOffWork(
+create or replace procedure ProSOffWork(
     pid in tblstudent.id%type,
     ppw in tblstudent.ssn%type
 )
@@ -594,22 +750,27 @@ begin
                                                                                                         where stu.id = pid and substr(stu.ssn,7) = ppw) 
                                                                               order by attendence_seq desc) 
                                                                        where rownum =1); -- 로그인 한 학생이 마지막에 남김 정보
+        dbms_output.put_line('=========================================================================================================================================================================================');
         dbms_output.put_line('퇴근완료');
-    else 
-        dbms_output.put_line('아이디 또는 비밀번호가 틀렸습니다.');
+        dbms_output.put_line('=========================================================================================================================================================================================');
     end if;
+exception
+    when others then
+    dbms_output.put_line('              권한이 없습니다. 로그인 정보를 다시 확인하세요');
+    dbms_output.put_line('');
+    dbms_output.put_line('          ================================================');
 end;
 
 
 -- 실행                                                                     
 begin
-    PSAttendSelSearch('qrs102','2325740','');
+    ProSAttendSelSearch('qrs102','2325740','2021');
 end;
 begin
-    PSGoTowork('qrs102','2325740');
+    ProSGoTowork('qrs102','2325740');
 end;
 begin
-    PSOffWork('qrs102','2325740');
+    ProSOffWork('qrs102','2325740');
 end;
 -----------------------------------------------------D-03 출결-------------------------------------------------------------
 commit;
@@ -631,7 +792,8 @@ rollback;
 -- ID : qrs102
 -- PW : 2325740
 -- 1. 작성
-create or replace PROCEDURE PSQuesrionadd(
+
+create or replace PROCEDURE ProSQuesrionadd(
     pid in tblstudent.id%type,
     ppw in tblstudent.ssn%type,
     pQuestion in tblquestion.question%type
@@ -648,17 +810,24 @@ begin
             su.sugang_seq
             from tblsugang su
             where sugang_seq = (select stu.student_seq from tblstudent stu where stu.id = pid and substr(stu.ssn,7) = ppw);
-            else 
-        dbms_output.put_line('아이디 또는 비밀번호가 틀렸습니다.');
+        dbms_output.put_line('=========================================================================================================================================================================================');
+        dbms_output.put_line('완료');
+        dbms_output.put_line('=========================================================================================================================================================================================');
     end if;
+exception
+    when others then
+    dbms_output.put_line('              권한이 없습니다. 로그인 정보를 다시 확인하세요');
+    dbms_output.put_line('');
+    dbms_output.put_line('          ================================================');
 end;
 
 -- 2. 조회
-create or replace procedure PSQuestionSearch(
+create or replace procedure ProSQuestionSearch(
     pid in tblstudent.id%type,
     ppw in tblstudent.ssn%type
 )
 is
+    vcheck NUMBER;
     vQDate tblquestion.questiondate%type;
     vquestion tblquestion.question%type;
     vADate varchar2(10)null;
@@ -678,13 +847,21 @@ is
                                               left outer join tblanswer A on q.question_seq = A.question_seq
                             where sugang.student_seq = (select stu.student_seq from tblstudent stu where stu.id = pid and substr(stu.ssn,7) = ppw); -- 로그인 후 학생 번호를 돌려주는 쿼리
 begin
+    select 1 into vcheck  from tblsugang su where su.student_seq = ( select stu.student_seq from tblstudent stu where stu.id = pid and substr(stu.ssn,7) = ppw);
     open vcursor;
         loop
             fetch vcursor into vQDate ,vquestion, vADate ,vAnswer;
             exit when vcursor%notfound;
+            dbms_output.put_line('=========================================================================================================================================================================================');
             dbms_output.put_line('질문 날짜 : '||vQDate||' | 질문 : '||vquestion||' | 답변 날짜 : '||vADate||' | 답변 : '||vAnswer);
+            dbms_output.put_line('=========================================================================================================================================================================================');
         end loop;
     close vcursor;
+exception
+    when others then
+    dbms_output.put_line('              권한이 없습니다. 로그인 정보를 다시 확인하세요');
+    dbms_output.put_line('');
+    dbms_output.put_line('          ================================================');
 end;
 
     
@@ -692,10 +869,10 @@ end;
     
 -- 실행                                                                     
 begin
-    PSQuesrionadd('qrs102','2325740','프로시저 질문 가능한지 테스트');
+    ProSQuesrionadd('qrs102','2325740','프로시저 질문 가능한지 테스트');
 end;
 begin
-    PSQuestionSearch('qrs102','2325740');
+    ProSQuestionSearch('qrs102','2325740');
 end;
 ---------------------------------------------------D-04 Q&A 작성------------------------------------------------------
 rollback;
@@ -714,7 +891,8 @@ commit;
 ---	상담신청이 수락 되었을 경우 관리자 또는 선생님과 상담을 할 수 있다.
 --    제약사항
 -- 1. 관리자 & 선생님 상담신청
-create or replace PROCEDURE PSCounselAdd(
+
+create or replace PROCEDURE ProSCounselAdd(
     pid in tblstudent.id%type,
     ppw in tblstudent.ssn%type,
     PTARGET in tblCounsel.TARGET%type,
@@ -740,13 +918,19 @@ begin
                           inner join tblstudent stu on stu.student_seq = su.student_seq
                           inner join tblmanager m on m.manager_seq = stu.manager_seq
             where rownum =1 and su.student_seq = (select stu.student_seq from tblstudent stu where stu.id = pid and substr(stu.ssn,7) = ppw);
-    else 
-        dbms_output.put_line('아이디 또는 비밀번호가 틀렸습니다.');
+        dbms_output.put_line('=========================================================================================================================================================================================');
+        dbms_output.put_line(PTARGET||' 에게 >>>>>> 질문 :'||PPURPOSE||'라고 상담을 남겼습니다.');
+        dbms_output.put_line('=========================================================================================================================================================================================');
     end if;
+exception
+    when others then
+    dbms_output.put_line('              권한이 없습니다. 로그인 정보를 다시 확인하세요');
+    dbms_output.put_line('');
+    dbms_output.put_line('          ================================================');
 end;
--- 실행                                                                     
+-- 실행 
 begin
-    PSCounselAdd('qrs102','2325740','선생님','프로시저 테스트 중 입니다.');
+    ProSCounselAdd('qrs102','2325740','관리자','저 교육지원금이 안들어온것 같아요ㅠㅠ');
 end;
 -- 확인용
 select * from tblCounsel where sugang_seq =6 and teacher_seq =11 and target = '선생님';

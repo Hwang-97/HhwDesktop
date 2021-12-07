@@ -356,7 +356,7 @@ commit;
 insert into tblquestion (question_seq,question,sugang_seq) 
                                 select
                                         (select question_SEQ from (select question_SEQ from tblquestion order by question_seq desc) where rownum =1)+1,
-                                        '질문이 있어요!!!!!!!!!!!!!!!!!!!',
+                                        '내일도 수업 하나요???',
                                         su.sugang_seq
                                    from tblsugang su
                                         where sugang_seq = (select stu.student_seq from tblstudent stu where stu.id = 'qrs102' and substr(stu.ssn,7) = '2325740');
