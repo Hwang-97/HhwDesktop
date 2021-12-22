@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<!--  
+<h1>sd</h1>
+<form action="/client/html/ex17_ok.jsp" method = "post">
+<input type = "text" name = "txt1">
+<input type = "submit" value = "서버로 전송하기"> 
+</form>
+<h1>네이버 검색</h1>
+<form action="https://search.naver.com/search.naver" method = "get">
+<input type ="text" name = "query">
+<input type ="submit" value = "검색하기">
+</form>
+-->
+
+<h1>입력 컨트롤</h1>
+텍스트 박스
+<form>
+<input type = "text" name="txt1" id="txt1" class = "txt" size="50" 
+maxlength="5">
+</form>
+텍스트 박스
+<form>
+<input type = "text" name="txt1" id="txt1" class = "txt" size="50" 
+maxlength="5" autocomplete = "off">
+</form>
+텍스트 박스
+<form>
+<input type = "text" name="txt1" id="txt1" class = "txt" size="50" 
+maxlength="5" autofocus><!-- 기본 포커스-->
+</form>
+텍스트 박스
+<form>
+<input type = "text" name="txt1" id="txt1" class = "txt" size="50" 
+maxlength="5" accesskey ="s"><!-- art + 지정키 누를시 해당 창으로 이동-->
+</form>
+텍스트 박스
+<form>
+<input type = "text" name="txt1" id="txt1" class = "txt" size="50" 
+maxlength="5" value="컨트롤의 입력값"><!-- 기본값-->
+</form>
+텍스트 박스
+<form>
+<input type = "text" name="txt1" id="txt1" class = "txt" size="50" 
+maxlength="5" value="컨트롤의 입력값" readonly ><!--읽기전용-->
+</form>
+텍스트 박스
+<form>
+<input type = "text" name="txt1" id="txt1" class = "txt" size="50" 
+maxlength="5" value="컨트롤의 입력값" disabled><!--사용 불가-->
+</form>
+암호
+<input type = "password">
+<br>
+텍스트 박스
+<br>
+<textarea cols="50" rows="5" style = "resize:none;">
+	홍길동
+	아무개
+	하하하	
+</textarea>
+<br>
+체크박스
+<br>
+<input type = "checkbox">
+<h1>취미</h1>
+<input type = "checkbox" id = "cb1"><label for = "cb1"> 독서</label>
+<label> <input type = "checkbox" id = "cb1">축구</label>
+<br>
+라디오 버튼
+<br>
+<input type = "radio" name = "rbGender"> 남자
+<input type = "radio" name = "rbGender" checked> 여자
+<br>
+셀렉트 박스
+<br>
+<select name ="sell">
+	<option value ="1">강아지</option>
+	<option value ="2">고양이</option>
+	<option value ="3">병아리</option>
+</select>
+
+<select name ="sel2" size ="5">
+	<option value ="1">강아지</option>
+	<option value ="2">고양이</option>
+	<option value ="3">병아리</option>
+</select>
+
+<select name ="sel3" multiple>
+	<option value ="1">강아지</option>
+	<option value ="2">고양이</option>
+	<option value ="3">병아리</option>
+</select>
+
+<select name ="sel4">
+	<option disabled>애완동물을 선택하세요.</oprion> <!-- 나중에 프로그램으로 선택 불가하게 설계해야됨 -->
+	<option value ="1">강아지</option>
+	<option value ="2">고양이</option>
+	<option value ="3">병아리</option>
+</select>
+
+<select name ="sel5">
+	<option disabled>애완동물을 선택하세요.</oprion> <!-- 나중에 프로그램으로 선택 불가하게 설계해야됨 -->
+	<option value ="1">강아지</option>
+	<option value ="2" disabled>고양이</option>
+	<option value ="3">병아리</option>
+</select>
+
+<select name ="sel3" multiple>
+<optgroup label="가">
+	<option value ="1">강아지</option>
+	<option value ="2">고양이</option>
+	<option value ="3">병아리</option>
+</optgroup>
+<optgroup label="나">
+	<option value ="1">강아지</option>
+	<option value ="2">고양이</option>
+	<option value ="3">병아리</option>
+</optgroup>
+<optgroup label="다">
+	<option value ="1">강아지</option>
+	<option value ="2">고양이</option>
+	<option value ="3">병아리</option>
+</optgroup>
+</select>
+
+<br>
+파일 업로드
+<br>
+<input type="file">
+
+<br>
+히든태크
+<br>
+<input type = "hidden" name = "seq" value="20">
+
+
+<br>
+버튼
+<br>
+<input type="submit" value ="전송버튼">
+<br>
+<input type="reset" value ="초기화">
+<br>
+<input type="image" src="./../images/catty01.png">
+<br>
+<input type="button" value="버튼" onclick = "alert('hello');">
+<br>
+<button type = "button">버튼</button>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

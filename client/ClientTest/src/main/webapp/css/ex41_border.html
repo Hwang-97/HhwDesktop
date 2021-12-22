@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body { margin-bottom: 300px; }
+
+        .box {
+            border: 1px solid black;
+            width: 300px;
+            height: 200px;
+            margin: 20px;
+        }
+
+        #box1 {
+            /* 모서리의 둥글기*/
+            /* 최대 > 정사각형 > 짧은 축의 1/2 */
+            /* border-radius: 50px; */
+
+            border-top-left-radius: 50%;
+            border-bottom-right-radius: 50%;
+            border-top-right-radius: 20%;
+            border-bottom-left-radius: 20%;
+        }
+        #btn{
+            border:0px;
+            background-color: steelblue;
+            color:white;
+            border-radius: 3px;
+            padding: 5px 15px;
+        }
+
+        #box2 {
+            width: 200px;
+            /*가로 혹은 세로의 1/2크기가 최댓값이며 가로세로가 같으면 원이 만들어진다.*/
+            /* border-radius: 100px; */
+            border-radius: 50%;
+        }
+        #box3 {
+            /* px는 정원 %는 사각형비율에맞는타원이 들어감 */
+            border-radius: 100px;
+            padding: 30px;
+        }
+
+        /* #list1 > img {
+            border: 10px solid cornflowerblue;
+            border-radius: 50%;
+        } */
+
+        #list1 > img:hover{
+         border: 10px solid cornflowerblue;
+            border-radius: 50%;
+        }
+
+        #textid{
+           border: 1px solid gray;
+           outline: none;
+           border-radius: 50px;
+           padding:3px 7px;
+        }
+        #btn{
+            border:0px;
+            background-color: steelblue;
+            color:white;
+            border-radius: 3px;
+            padding: 5px 15px;
+        }
+        #btn:hover{
+            box-shadow: 0px 0px 3px #555;
+        }
+    </style>
+</head>
+<body>
+    <!-- ex41_border.html -->
+
+    <!-- (div#box$.box>lorem)*3 -->
+    <div id="box1" class="box">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea, aspernatur quia non enim, consectetur architecto adipisci delectus mollitia debitis fugit maiores facilis consequuntur omnis repellat assumenda doloremque eos placeat nam.</div>
+    <div id="box2" class="box">Expedita facilis nemo deserunt cumque tenetur, architecto nesciunt cum ratione excepturi, hic eos commodi modi, aspernatur nam mollitia earum optio ex voluptas asperiores distinctio itaque ipsa harum similique consequuntur. Magnam.</div>
+    <div id="box3" class="box">Ipsam nam atque sit est non perspiciatis, sint aperiam, tempora dolore harum omnis eos quae libero architecto magni maxime nostrum qui aliquam eveniet officiis soluta? Sequi aut assumenda repudiandae veniam!</div>
+
+    <div id="list1">
+        <img src="../images/dog01.jpg">
+        <img src="../images/dog02.jpg">
+        <img src="../images/dog03.jpg">
+        <img src="../images/dog04.jpg">
+        <img src="../images/dog05.jpg">
+    </div>
+
+
+    <h1>폼 태그</h1>
+    아이디: <input type="text" id = "textid">
+    <input type="botton" id ="btn" value="가입하기">
+</body>
+</html>

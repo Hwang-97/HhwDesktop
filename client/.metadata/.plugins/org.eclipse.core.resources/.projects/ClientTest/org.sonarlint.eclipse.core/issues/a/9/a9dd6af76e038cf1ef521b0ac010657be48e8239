@@ -1,0 +1,124 @@
+
+[	Web:S1827w")Remove this deprecated "align" attribute.(ÚÆ©8Ç­î¥Ú/H‚RMAJORZ
+CODE_SMELL
+`	Web:S1827a")Remove this deprecated "align" attribute.(¥ÏÏæúÿÿÿÿ8Ç­î¥Ú/HşRMAJORZ
+CODE_SMELL
+\	Web:S1827Œ")Remove this deprecated "align" attribute.(ÅĞ§ï8Ç­î¥Ú/H€RMAJORZ
+CODE_SMELL
+[	Web:S1827>")Remove this deprecated "width" attribute.(ÃƒÏ‹8ğ£Ô¥Ú/H¤RMAJORZ
+CODE_SMELL
+\	Web:S1827€")Remove this deprecated "align" attribute.(ÓüúÖ8Ç­î¥Ú/H„RMAJORZ
+CODE_SMELL
+bWeb:BoldAndItalicTagsCheck""!Replace this <b> tag by <strong>.(«õÑüÿÿÿÿ8¯˜´¥Ú/HÓRMINORZBUG
+`	Web:S18274")Remove this deprecated "width" attribute.(©ùíÄúÿÿÿÿ8Ô˜¾¥Ú/H’RMAJORZ
+CODE_SMELL
+`	Web:S1827:")Remove this deprecated "align" attribute.(ß¥‘Ùşÿÿÿÿ8‰ØÎ¥Ú/H“RMAJORZ
+CODE_SMELL
+`	Web:S18270")Remove this deprecated "width" attribute.(©ùíÄúÿÿÿÿ8Ô˜¾¥Ú/HRMAJORZ
+CODE_SMELL
+`	Web:S1827?")Remove this deprecated "align" attribute.(Âœæşÿÿÿÿ8ğÊş¥Ú/HÅRMAJORZ
+CODE_SMELL
+Z	Web:S1827|")Remove this deprecated "align" attribute.(ñÒ¢@8Şêİ¥Ú/H¼RMAJORZ
+CODE_SMELL
+\	Web:S1827")Remove this deprecated "align" attribute.(ÊÌíê8Şêİ¥Ú/H½RMAJORZ
+CODE_SMELL
+O	Web:S5256)"%Add "<th>" headers to this "<table>".(à¹Œ78Üû·¥Ú/HİRMAJORZBUG
+[	Web:S1827")Remove this deprecated "width" attribute.(—´öÛ8â›±¥Ú/HÂRMAJORZ
+CODE_SMELL
+P	Web:S5256"%Add "<th>" headers to this "<table>".(—´öÛ8™€Œ¥Ú/HÌRMAJORZBUG
+[	Web:S1827")Remove this deprecated "align" attribute.(è›¢Ü8¯˜´¥Ú/HÒRMAJORZ
+CODE_SMELL
+[	Web:S1827g")Remove this deprecated "align" attribute.(œà¬•8Şêİ¥Ú/H¹RMAJORZ
+CODE_SMELL
+[	Web:S1827O")Remove this deprecated "align" attribute.(»‹›Ì8Şêİ¥Ú/H¿RMAJORZ
+CODE_SMELL
+`	Web:S1827=")Remove this deprecated "align" attribute.(ı¦§Šıÿÿÿÿ8ğ£Ô¥Ú/H£RMAJORZ
+CODE_SMELL
+`	Web:S1827U")Remove this deprecated "align" attribute.(ä¢§íûÿÿÿÿ8Şêİ¥Ú/HºRMAJORZ
+CODE_SMELL
+`	Web:S1827.")Remove this deprecated "width" attribute.(©ùíÄúÿÿÿÿ8Ô˜¾¥Ú/HŒRMAJORZ
+CODE_SMELL
+U	Web:S5256"%Add "<th>" headers to this "<table>".(¿‰˜ÿÿÿÿÿ8¶ß„¥Ú/H½RMAJORZBUG
+`	Web:S1827z")Remove this deprecated "align" attribute.(Ùš§Ûÿÿÿÿÿ8Ç­î¥Ú/HƒRMAJORZ
+CODE_SMELL
+`	Web:S1827@")Remove this deprecated "align" attribute.(€¿Œªùÿÿÿÿ8ğÊş¥Ú/HÆRMAJORZ
+CODE_SMELL
+[	Web:S1827m")Remove this deprecated "align" attribute.(× —ˆ8Ç­î¥Ú/H†RMAJORZ
+CODE_SMELL
+U	Web:S5256"%Add "<th>" headers to this "<table>".(‹àéòÿÿÿÿÿ8Ì›ö¤Ú/H²RMAJORZBUG
+[	Web:S1827")Remove this deprecated "align" attribute.(­çĞ·8¯˜´¥Ú/HĞRMAJORZ
+CODE_SMELL
+]Web:TableWithoutCaptionCheck)" Add a description to this table.(à¹Œ78Üû·¥Ú/HÜRMINORZBUG
+`	Web:S18272")Remove this deprecated "width" attribute.(©ùíÄúÿÿÿÿ8Ô˜¾¥Ú/HRMAJORZ
+CODE_SMELL
+[	Web:S1827")Remove this deprecated "align" attribute.(ÁõÈÈ8„œ®¥Ú/H»RMAJORZ
+CODE_SMELL
+[	Web:S1827>")Remove this deprecated "align" attribute.(ÃƒÏ‹8ğÊş¥Ú/HÄRMAJORZ
+CODE_SMELL
+`	Web:S1827?")Remove this deprecated "width" attribute.(Âœæşÿÿÿÿ8ğ£Ô¥Ú/H¥RMAJORZ
+CODE_SMELL
+`	Web:S18271")Remove this deprecated "align" attribute.(–£ïùûÿÿÿÿ8Ô˜¾¥Ú/HRMAJORZ
+CODE_SMELL
+[	Web:S1827u")Remove this deprecated "align" attribute.(ÊÌíê8Ç­î¥Ú/HÿRMAJORZ
+CODE_SMELL
+O	Web:S52568"%Add "<th>" headers to this "<table>".(à¹Œ78ªºÃ¥Ú/H£RMAJORZBUG
+`	Web:S1827"")Remove this deprecated "align" attribute.(«õÑüÿÿÿÿ8ÑÖ²¥Ú/HÉRMAJORZ
+CODE_SMELL
+`	Web:S1827")Remove this deprecated "width" attribute.(‹àéòÿÿÿÿÿ8öäø¤Ú/HµRMAJORZ
+CODE_SMELL
+[	Web:S1827+")Remove this deprecated "align" attribute.(Ç±”À8Ô˜¾¥Ú/H‰RMAJORZ
+CODE_SMELL
+a	Web:S1827†")Remove this deprecated "align" attribute.(Ùš§Ûÿÿÿÿÿ8Şêİ¥Ú/H»RMAJORZ
+CODE_SMELL
+`	Web:S1827")Remove this deprecated "align" attribute.(Ê²©ıùÿÿÿÿ8¯˜´¥Ú/HÑRMAJORZ
+CODE_SMELL
+`	Web:S1827,")Remove this deprecated "width" attribute.(©ùíÄúÿÿÿÿ8Ô˜¾¥Ú/HŠRMAJORZ
+CODE_SMELL
+[	Web:S1827C")Remove this deprecated "align" attribute.(‘Ê‘8Şêİ¥Ú/H¶RMAJORZ
+CODE_SMELL
+`	Web:S1827
+")Remove this deprecated "align" attribute.(šİó©ùÿÿÿÿ8Ç÷¤Ú/H³RMAJORZ
+CODE_SMELL
+`	Web:S18273")Remove this deprecated "align" attribute.(ÉÉ¬ëıÿÿÿÿ8Ô˜¾¥Ú/H‘RMAJORZ
+CODE_SMELL
+`	Web:S1827@")Remove this deprecated "width" attribute.(€¿Œªùÿÿÿÿ8ğ£Ô¥Ú/H¦RMAJORZ
+CODE_SMELL
+[	Web:S1827I")Remove this deprecated "align" attribute.(Ú‘8Şêİ¥Ú/H¸RMAJORZ
+CODE_SMELL
+a	Web:S1827")Remove this deprecated "align" attribute.(àÿÅ¶ÿÿÿÿÿ8Ç­î¥Ú/H…RMAJORZ
+CODE_SMELL
+[	Web:S1827+")Remove this deprecated "width" attribute.(Ç±”À8‰ØÎ¥Ú/HRMAJORZ
+CODE_SMELL
+`	Web:S18273")Remove this deprecated "width" attribute.(ÉÉ¬ëıÿÿÿÿ8‰ØÎ¥Ú/H’RMAJORZ
+CODE_SMELL
+cWeb:TableWithoutCaptionCheck" Add a description to this table.(‹àéòÿÿÿÿÿ8Ì›ö¤Ú/H±RMINORZBUG
+[	Web:S1827-")Remove this deprecated "width" attribute.(ç¸æ÷8‰ØÎ¥Ú/HRMAJORZ
+CODE_SMELL
+`	Web:S1827[")Remove this deprecated "align" attribute.(¯ÿóäùÿÿÿÿ8Ç­î¥Ú/HRMAJORZ
+CODE_SMELL
+`	Web:S1827s")Remove this deprecated "align" attribute.(™Áÿ°øÿÿÿÿ8Şêİ¥Ú/H¾RMAJORZ
+CODE_SMELL
+`	Web:S1827t")Remove this deprecated "align" attribute.(äÖäşÿÿÿÿ8Şêİ¥Ú/HÀRMAJORZ
+CODE_SMELL
+cWeb:TableWithoutCaptionCheck" Add a description to this table.(¿‰˜ÿÿÿÿÿ8¶ß„¥Ú/H¼RMINORZBUG
+]Web:TableWithoutCaptionCheck8" Add a description to this table.(à¹Œ78ªºÃ¥Ú/H¢RMINORZBUG
+Z	Web:S1827)")Remove this deprecated "width" attribute.(à¹Œ78Üû·¥Ú/HŞRMAJORZ
+CODE_SMELL
+`	Web:S1827/")Remove this deprecated "width" attribute.(©Ï³ôøÿÿÿÿ8‰ØÎ¥Ú/HRMAJORZ
+CODE_SMELL
+\	Web:S1827ƒ")Remove this deprecated "align" attribute.(ÚÆ©8Ç­î¥Ú/HıRMAJORZ
+CODE_SMELL
+i	Web:S5254"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(œ÷ÃûÿÿÿÿH°RMAJORZBUG
+`	Web:S18271")Remove this deprecated "width" attribute.(–£ïùûÿÿÿÿ8‰ØÎ¥Ú/H‘RMAJORZ
+CODE_SMELL
+[	Web:S1827ˆ")Remove this deprecated "align" attribute.(ñÒ¢@8Şêİ¥Ú/H·RMAJORZ
+CODE_SMELL
+[	Web:S1827-")Remove this deprecated "align" attribute.(ç¸æ÷8Ô˜¾¥Ú/H‹RMAJORZ
+CODE_SMELL
+`	Web:S1827=")Remove this deprecated "width" attribute.(ı¦§Šıÿÿÿÿ8ğÊş¥Ú/HÃRMAJORZ
+CODE_SMELL
+Z	Web:S18278")Remove this deprecated "width" attribute.(à¹Œ78ªºÃ¥Ú/H¤RMAJORZ
+CODE_SMELL
+`	Web:S1827/")Remove this deprecated "align" attribute.(©Ï³ôøÿÿÿÿ8Ô˜¾¥Ú/HRMAJORZ
+CODE_SMELL
+^Web:TableWithoutCaptionCheck" Add a description to this table.(—´öÛ8™€Œ¥Ú/HÍRMINORZBUG

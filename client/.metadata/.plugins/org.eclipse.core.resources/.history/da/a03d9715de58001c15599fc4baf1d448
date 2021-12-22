@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Q1</title>
+</head>
+<body>
+<h1><font color = "005A9C">HTML5 Reference</font></h1>
+<h2>W3C Editor’s Draft 9 August 2010</h2>
+<strong>This version:</strong><br>
+<a href="http://www.w3.org/TR/2010/ED-html5-author-20100809">
+<font color ="000000">http://www.w3.org/TR/2010/ED-html5-author-20100809
+</font>
+</a><br>
+
+<strong>Latest version:</strong><br>
+<a href="http://www.w3.org/TR/">
+<font color ="000000"><u>http://www.w3.org/TR/</u></font>
+</a><br>
+
+<strong>Previous version:</strong><br>
+<a href="No previous versions.">
+<font color ="000000"><u>No previous versions.</u></font>
+</a><br>
+
+<strong>Editors:</strong><br>
+<a href="Lachlan Hunt (Opera Software ASA) lachlan.hunt@lachy.id.au">
+<font color ="000000"><u>Lachlan Hunt (Opera Software ASA) lachlan.hunt@lachy.id.au</u></font>
+</a><br><br>
+
+<hr size ="1" width="100%">
+
+<b><font color = "005A9C" size ="5">Abstract</font></b><br>
+
+</body>
+</html>

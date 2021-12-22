@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<form action="./ex20_ok.jsp">
+
+이름: <input type="text">
+<hr>
+
+<input type="text" value ="이름을 입력하세요." onfocus= "this.value = '';">
+<hr>
+
+<input type="password" value ="이름을 입력하세요." onfocus= "this.value = '';">
+<hr>
+
+<input type="text" placeholder="이름을 입력하세요.">
+<hr>
+
+<input type="text" placeholder="이름을 입력하세요.">
+<hr>
+
+<textarea placeholder ="자기 소개를 입려하세요"cols="30"rows="5"></textarea>
+
+
+<h2>로그인</h2>
+아이디 : <input type = "text" required value="hong"><br>
+암호 : <input type = "password" required value="1111"><br>
+<input type="submit" value="로그인">
+
+
+<br>
+전화번호 : <input type = "tel">
+url : <input type="url">
+숫자 : <input type = "number" min="0" max="100" step="10">
+<br>
+범위 : <input type = "range" min="0" max ="100">
+<input type="text" id="txt1" size="10">
+
+
+</form>
+</body>
+</html>

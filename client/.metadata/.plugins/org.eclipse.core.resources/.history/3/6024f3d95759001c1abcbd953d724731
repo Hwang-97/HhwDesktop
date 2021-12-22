@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<img src="./../images/cat01.jpg" alt="애교떠는 고양이">
+<img src="/client/images/cat01.jpg" alt="우왕하는 고양이">
+
+</body>
+</html>

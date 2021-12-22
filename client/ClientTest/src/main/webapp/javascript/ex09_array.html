@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var nums = new Array();
+
+        nums[0] = 100;
+        nums[1] = 200;
+        nums[2] = 300;
+
+        for(var i=0; i<nums.length;i++){
+            console.log(nums[i]);
+        }
+
+        var num7 = [];
+
+        for(var i =3; i<=(3*10);i+=3){
+            num7.push(i);//append
+        }
+        console.log(num7);
+        console.log(num7.pop());
+        console.log(num7);
+
+        try{
+            console.log(100/m);
+
+            throw 'user exception';
+        }catch(e){
+            console.log('예외처리');
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

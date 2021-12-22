@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Q1</title>
+</head>
+<body>
+<h1><font color = "005A9C">HTML5 Reference</font></h1>
+<h2>W3C Editor’s Draft 9 August 2010</h2>
+<strong>This version:</strong><br>
+<a href="http://www.w3.org/TR/2010/ED-html5-author-20100809">
+<font color ="000000">http://www.w3.org/TR/2010/ED-html5-author-20100809
+</font>
+</a><br>
+<strong>Latest version:</strong><br>
+<a href="http://www.w3.org/TR/">
+<font color ="000000"><u>http://www.w3.org/TR/</u></font>
+</a>
+Previous version:
+No previous versions.
+</body>
+</html>

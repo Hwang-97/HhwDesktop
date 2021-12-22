@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var txt = 'Hello~ Hong~';
+        console.log(txt.length);
+        console.log(txt.indexOf('~'));
+        console.log(txt.indexOf('~',6));
+        console.log(txt.lastIndexOf('~'));
+        console.log(txt.toUpperCase());
+        console.log(txt.toLowerCase());
+        console.log(txt.substring(2,8));
+        console.log(txt.substring(2));
+        console.log(txt.substr(2,6));//**
+        console.log(txt.replace('Hong','Lee'));
+        console.log(txt.replace('H','L'));
+        console.log(txt.replace(/H/gi,'L'));
+        /[a-zA-Z]/g
+
+        console.log(txt.charAt(0));
+        console.log(txt.charCodeAt(0));
+
+        txt = '           하나              둘   '
+        console.log('@'+txt.trim+'@');
+
+        txt="홍길동,아무개,하하하";
+        console.log(txt.split(','));
+
+        txt='홍길동';
+        console.log(txt.startsWith('홍'));
+        console.log(txt.endsWith('동'));
+
+        console.log(txt.bold());
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

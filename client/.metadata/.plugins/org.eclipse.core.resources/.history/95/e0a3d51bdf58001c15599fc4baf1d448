@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Q1</title>
+</head>
+<body>
+<h1><font color = "005A9C">HTML5 Reference</font></h1>
+<h2>W3C Editor’s Draft 9 August 2010</h2>
+<strong>This version:</strong><br>
+<a href="http://www.w3.org/TR/2010/ED-html5-author-20100809">
+<font color ="000000">http://www.w3.org/TR/2010/ED-html5-author-20100809
+</font>
+</a><br>
+
+<strong>Latest version:</strong><br>
+<a href="http://www.w3.org/TR/">
+<font color ="000000"><u>http://www.w3.org/TR/</u></font>
+</a><br>
+
+<strong>Previous version:</strong><br>
+<a href="No previous versions.">
+<font color ="000000"><u>No previous versions.</u></font>
+</a><br>
+
+<strong>Editors:</strong><br>
+<a href="Lachlan Hunt (Opera Software ASA) lachlan.hunt@lachy.id.au">
+<font color ="000000"><u>Lachlan Hunt (Opera Software ASA) lachlan.hunt@lachy.id.au</u></font>
+</a><br><br>
+
+<hr size ="1" width="100%"><br>
+
+<font color = "005A9C" size ="4"><b>Abstract</b></font><br>
+<p>This document explains the syntax, vocabulary and the available APIs for HTML5 documents, focussing on simplicity and practical applications for beginners while also providing in depth information for more advanced web developers.This document is complimentary to the HTML5 Guide.</p><br>
+
+<font color = "005A9C" size ="4"><b>Status of this document</b></font><br>
+<p>This section describes the status of this document at the time of its publication. Other documents may supersede this document. A list of current W3C publications and the latest revision of this technical report can be found in the W3C technical reports index at http://www.w3.org/TR/.</p>
+<p>This document is an Editors Draft of the “HTML5 Reference” produced by the HTML Working Group, part of the HTML Activity. The working group is working on HTML5 (see the HTML5 Editor’s draft). The appropriate forum for comments on this document is public-html-comments@w3.org (public archive) or public-html@w3.org (public archive).</p>
+<p>Publication as a Working Group Note does not imply endorsement by the W3C Membership. This is a draft document and may be updated, replaced or obsoleted by other documents at any time. It is inappropriate to cite this document as other than work in progress.</p>
+<p>This document was produced by a group operating under the 5 February 2004 W3C Patent Policy. W3C maintains a public list of any patent disclosures made in connection with the deliverables of the group; that page also includes instructions for disclosing a patent. An individual who has actual knowledge of a patent which the individual believes contains Essential Claim(s) must disclose the information in accordance with section 6 of the W3C Patent Policy.</p>
+
+<font color = "005A9C" size ="4"><b>STable of contents</b></font><br>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 
+        자식 선택자 child selector 
+        - 부모 선택자 > 자식 선택자 {구현부 :}
+        자손 선택자 Descendant Selector
+        - 부모 선택자 자손 선택자 {구현부 ;}
+    -->
+    <style>
+        ul li strong{color : blue}
+        ol li strong{text-decoration: underline;}
+    </style>
+</head>
+<body>
+    <h1>강의 목록</h1>
+    <ol>
+        <li class = "item">JAVA</li>
+        <li class = "item">ORACLE</li>
+        <li class = "item">HTML<strong>(온라인)</strong></li>
+        <li class = "item">CSS</li>
+        <li class = "item">JavaScript</li>
+    </ol>
+    <h1>시험과목</h1>
+    <ul>
+        <li>JAVA</li>
+        <li>ORACLE<strong>(실기)</strong></li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript<strong>(실기)</strong></li>
+    </ul>
+</body>
+</html>

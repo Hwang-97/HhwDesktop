@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main{
+            padding-top: 1px;
+            padding-left: 140px;
+            padding-right: 140px;
+        }
+        #content{
+            text-align: left;
+        }
+        #contents{
+            border:1px solid black;
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+        }
+        #contents>div{
+            transition: all 5s;
+        }
+        #contents>div:hover{
+            transform:translate(0px,-700px);
+        }
+    </style>
+</head>
+<body>
+    <div id = "main">
+        <div id = "content">
+            <h1>transition</h1>
+            <p>▒아래 상자에 마우스를 올리면 내용이 스크롤 됩니다.</p>
+            <div id="contents">
+                <div>
+                    <h1>Lorem ipsum dolor sit amet.</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque veniam, distinctio iusto quas officia odit possimus doloribus? Accusamus, eveniet quae!</p>
+                    <h1>Fuga fugiat necessitatibus sed quaerat.</h1>
+                    <p>Harum illo deserunt qui libero dolores, quod rem. Illo aut reiciendis sint provident adipisci maxime a suscipit cupiditate inventore fugit.</p>
+                    <h1>Eius consequatur aperiam veritatis quas.</h1>
+                    <p>Eos ipsa impedit voluptates facere inventore corrupti magni, alias necessitatibus, mollitia obcaecati dolores quo dolor optio omnis commodi vero tempore?</p>
+                    <h1>Explicabo sapiente esse soluta autem?</h1>
+                    <p>Ipsum ducimus magni incidunt harum enim ipsam amet in fugit facilis, quaerat dolores quam explicabo minus, dolorum natus, rerum laboriosam.</p>
+                    <h1>Nemo quisquam expedita et ut.</h1>
+                    <p>Ipsum nulla exercitationem, itaque sequi pariatur corrupti minus, quis iste earum odio inventore in amet. Commodi aliquam aspernatur soluta quaerat.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

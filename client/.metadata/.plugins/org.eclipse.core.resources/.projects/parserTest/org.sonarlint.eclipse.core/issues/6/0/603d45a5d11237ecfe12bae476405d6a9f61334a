@@ -1,0 +1,11 @@
+
+l
+java:S1128"4Remove this unused import 'org.jsoup.nodes.Element'.(ýƒ‘öþÿÿÿÿ8±ìÕ”Ü/HÍRMINORZ
+CODE_SMELL
+Š	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ì±Ñ¨ûÿÿÿÿHÁRMINORZ
+CODE_SMELL
+s	java:S125"<This block of commented-out lines of code should be removed.(Äî­±þÿÿÿÿ8±ìÕ”Ü/HÇRMAJORZ
+CODE_SMELL
+i
+java:S1128"6Remove this unused import 'org.jsoup.select.Elements'.(ëÂè8±ìÕ”Ü/HÏRMINORZ
+CODE_SMELL

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            border: 1px solid black;
+            width: 350px;
+            height: 350px;
+            margin: 20px;
+        }
+
+        #box1{
+            background-image: url(../images/cat01.jpg);
+            background-repeat: no-repeat;
+            /* background-size: 350px 350px; */
+            background-size: auto 350px;
+        }
+        #box2{
+            background-image: url(../images/cat01.jpg);
+            background-repeat: no-repeat;
+            /* background-size: 350px 350px; */
+            background-size: cover;
+        }
+        #box3{
+            background-image: url("../images/cat01.jpg");
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="box1" class="box">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea, aspernatur quia non enim, consectetur architecto adipisci delectus mollitia debitis fugit maiores facilis consequuntur omnis repellat assumenda doloremque eos placeat nam.</div>
+    <div id="box2" class="box">Expedita facilis nemo deserunt cumque tenetur, architecto nesciunt cum ratione excepturi, hic eos commodi modi, aspernatur nam mollitia earum optio ex voluptas asperiores distinctio itaque ipsa harum similique consequuntur. Magnam.</div>
+    <div id="box3" class="box">Ipsam nam atque sit est non perspiciatis, sint aperiam, tempora dolore harum omnis eos quae libero architecto magni maxime nostrum qui aliquam eveniet officiis soluta? Sequi aut assumenda repudiandae veniam!</div>
+</body>
+</html>

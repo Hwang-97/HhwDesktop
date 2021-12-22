@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            border:1px solid black;
+            margin-bottom: 3px;
+            width: 150px;
+            height: 150px;
+        }
+
+        #box1{
+            background-color: tomato;
+        }
+        #box2{
+            background-color: gold;
+        }
+        #box3{
+            background-color: cornflowerblue;
+        }
+        @keyframes key1{
+            from{
+                width:150px;
+            }
+            to{
+                width:300px;
+            }
+        }
+        #box1{
+            animation-name: key1;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+        }
+        #box1:hover{
+            /* width:300px
+            animation-name: key1;
+            animation-duration: 1s;
+            animation-fill-mode: forwards; */
+        }
+        #box2{
+            animation-name: key1;
+            animation-duration: 1s;
+            animation-fill-mode: backwards;
+        }
+        @keyframes key3{
+            0%{
+                left:0px; top:0px;
+                width:150px;
+                background-color: cornflowerblue;
+            }
+            25%{
+                left:300px; top:0px;
+                width : 300px;
+                background-color:orange;
+            }
+            50%{
+                left:300px; top:300px;
+                width: 0px;
+                background-color:blue;
+            }
+            75%{
+                left:0px; top:300px;
+                width: 300px;
+                background-color:black;
+            }
+            100%{
+                left:0px; top:0px;
+                width: 150px;
+                background-color:red;
+            }
+        }
+        #box3{
+            animation-name: key3;
+            animation-duration: 1s;
+            animation-timing-function: linear;
+            animation-iteration-count: 3;
+            animation-direction:alternate;
+            position:relative;
+        }
+        @keyframes key4{
+            0%{
+                transform: scale(1,1);
+            }
+            50%{
+                transform: scale(1.2,1.2);
+            }
+            100%{
+                transform: scale(1,1);
+            }
+        }
+        body{
+            background-color: rosybrown;
+            animation-name: key4;
+            animation-duration: 1s;
+        }
+        @keyframes keyCat{
+            0%{
+                transfom:translate(0px,0px);
+            }
+            40%{
+                transfom:translate(0px,-300px) rotate(0deg);
+            }
+            50%{
+                transfom:translate(0px,-300px) rotate(360deg);
+            }
+            60%{
+                transfom:translate(0px,-300px)
+                rotate(0deg);
+            }
+            100%{
+                transfom:translate(0px,0px);
+            }
+        }
+        div>.cat{
+            animation-name:keyCat;
+            animation-duration: 1s;
+            animation-iteration-count:3;
+            animation-timing-function:ease-in-out;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="box1" class="box">상자1</div>
+    <div id="box2" class="box">상자2</div>
+    <div id="box3" class="box">상자3</div>
+    <h1>고양이</h1>
+    <div>
+        <img id="cat1" class="cat" src="../images/catty01.png" alt="">
+        <img id="cat2" class="cat" src="../images/catty02.png" alt="">
+        <img id="cat3" class="cat" src="../images/catty03.png" alt="">
+        <img id="cat4" class="cat" src="../images/catty04.png" alt="">
+        <img id="cat5" class="cat" src="../images/catty05.png" alt="">
+    </div>
+</body>
+</html>

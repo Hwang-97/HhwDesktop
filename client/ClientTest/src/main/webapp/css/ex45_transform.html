@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body { margin-bottom: 300px; }
+
+        .box {
+            border: 1px solid black;
+            width: 200px;
+            height: 200px;
+            margin: 20px;
+            transform: translate();
+        }
+        #box1{
+            background-color:gold;
+            /* transform: translate(100px,100px); */
+            /* transform:scale(2,2); */
+            transform:rotate(45deg);
+        }
+        #cat>img{
+            opacity: 5;
+        }
+        #cat>img:hover{
+            opacity:1;
+            /* transform: translate(0px,-10px); */
+            transform: scale(1.2,-1.2);
+        }
+        #button>input{
+            background-color: brown;
+            width:100px;
+            height:100px;
+        }
+        #button>input:hover{
+            transform: scale(1.2,1.2) rotate(45deg) translate(100px,100px) skew(45deg,0deg);
+            /* transform:rotate(45deg); */
+        }
+        #menu{
+            border : 1px solid black;
+            width:630px;
+            /* margin:0px auto; */
+            position:fixed;
+            top:0px;
+            left:0;
+            right:0;
+
+            transform: translate(0px,-100px);
+        }
+        #menu::after{
+            content:'';
+            display: block;
+            clear:both;
+        }
+        #menu img{
+            float: left;
+        }
+        #menu img:hover{
+            transform: translate(0px,100px);
+        }
+        /* #menu:hover{
+            transform: translate(0px,90px);
+        } */
+    </style>
+</head>
+<body>
+    <h1>Box</h1>
+
+    <div id="box1" class="box">상자1상자1상자1상자1상자1상자1상자1상자1상자1상자1상자1</div>
+    <div id="box2" class="box">상자2</div>
+    <div id="box3" class="box">상자3</div>
+
+    <div id="cat">
+        <img src="../images/catty01.png">
+        <img src="../images/catty02.png">
+        <img src="../images/catty04.png">
+        <img src="../images/catty03.png">
+        <img src="../images/catty05.png">
+    </div>
+
+    <div id="button">
+        <input type="button" value="click" >
+    </div>
+
+    <nav id="menu">
+        <img src="../images/rect_icon01.png">
+        <img src="../images/rect_icon02.png">
+        <img src="../images/rect_icon03.png">
+        <img src="../images/rect_icon04.png">
+        <img src="../images/rect_icon05.png">
+    </nav>
+    <h1>Title</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur dolorem laudantium pariatur fugit natus architecto voluptatibus quis voluptas nostrum sed.</p>
+    <p>Consequatur perferendis dicta expedita fugit odio numquam ex beatae accusamus voluptatem debitis, necessitatibus, quibusdam molestiae fuga voluptatibus repellat, ratione magnam?</p>
+    <p>Similique, voluptatum. Porro ipsam debitis neque reiciendis animi explicabo molestiae commodi nam nesciunt placeat aliquid, alias laudantium doloribus consectetur recusandae?</p>
+
+</body>
+</html>

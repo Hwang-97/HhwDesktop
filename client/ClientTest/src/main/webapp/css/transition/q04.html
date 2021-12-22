@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main{
+            margin-right: 150px;
+            margin-left: 150px;
+        }
+        #title{
+            text-align: left;
+        }
+        #text{
+            text-align: left;
+        }
+        .tblLine1>td>img,.tblLine2>td>img,.tblLine3>td>img,.tblLine4>td>img{
+            width: 80px;
+            padding: 0px;
+        }
+        .tblLine1>td,.tblLine2>td,.tblLine3>td,.tblLine4>td
+        {
+            border:8px solid black;
+            overflow: hidden;
+        }
+        .tblLine1 img{
+            transform: translate(-90px,2px);
+            transition: all 1s;
+        }
+        .tblLine2 img{
+            opacity: 0;
+            transition: all 1s;
+        }
+        .tblLine3 img{
+            opacity: 0;
+            transition: all 1s;
+        }
+        .tblLine4 img{
+            transform: translate(0px,-100px) rotate(-180deg);
+            transition: all 1s;
+        }
+
+        .tblLine1>td:hover img{
+            transform: translate(0px,0px);
+        }
+        .tblLine2>td:hover img{
+            opacity: 1;
+        }
+        .tblLine3>td:hover img{
+            transform: scale(1.2,1.2);
+            opacity: 1;
+        }
+        .tblLine4>td:hover img{
+            transform: translate(0px,0px) rotate(0);
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div id ="main">
+        <h1 id="title">:hover + transform + transition</h1>
+        <p id="text">▒마우스를 올리면 반응하시오.</p>
+        <table id="tbl">
+            <tr class="tblLine1">
+                <td><img src="../../images/rect_icon01.png" alt=""></td>
+                <td><img src="../../images/rect_icon02.png" alt=""></td>
+                <td><img src="../../images/rect_icon03.png" alt=""></td>
+                <td><img src="../../images/rect_icon04.png" alt=""></td>
+                <td><img src="../../images/rect_icon05.png" alt=""></td>
+            </tr>
+            <tr class="tblLine2">
+                <td><img src="../../images/rect_icon01.png" alt=""></td>
+                <td><img src="../../images/rect_icon02.png" alt=""></td>
+                <td><img src="../../images/rect_icon03.png" alt=""></td>
+                <td><img src="../../images/rect_icon04.png" alt=""></td>
+                <td><img src="../../images/rect_icon05.png" alt=""></td>
+            </tr>
+            <tr class="tblLine3">
+                <td><img src="../../images/rect_icon01.png" alt=""></td>
+                <td><img src="../../images/rect_icon02.png" alt=""></td>
+                <td><img src="../../images/rect_icon03.png" alt=""></td>
+                <td><img src="../../images/rect_icon04.png" alt=""></td>
+                <td><img src="../../images/rect_icon05.png" alt=""></td>
+            </tr>
+            <tr class="tblLine4">
+                <td><img src="../../images/rect_icon01.png" alt=""></td>
+                <td><img src="../../images/rect_icon02.png" alt=""></td>
+                <td><img src="../../images/rect_icon03.png" alt=""></td>
+                <td><img src="../../images/rect_icon04.png" alt=""></td>
+                <td><img src="../../images/rect_icon05.png" alt=""></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

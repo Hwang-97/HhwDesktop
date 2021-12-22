@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            outline:none;
+            border:1px solid #444;
+            padding:3px;
+            background-color: white;
+        }
+        /* input:required{
+            background-color: gold;
+        }
+        input:optional{
+            background-color: cornflowerblue;
+        } */
+        /* input:disabled{background-color: tomato;}
+        input:enabled{background-color: gold;} */
+        /* input:read-only{background-color: gold;} */
+        /* input:read-only{cursor: not-allowed;}
+        body{cursor:progress;} */
+        input[type=checkbox]:nth-child(1){
+            opacity: 0.3;
+        }/*체크박스는 설정 불가*/
+        input[type=checkbox]:checked{
+            opacity: 1;
+        }/*체크박스는 설정 불가*/
+        .cb-cat:checked+.cat{
+            visibility: hidden;
+        }
+        #cb1:checked+div{
+            display: none;
+        }
+        #cb1:checked{display: none;}
+    </style>
+</head>
+<body>
+    <div><input type="text" required></div>
+    <div><input type="text"></div>
+    <div><input type="text" readonly></div>
+    <div><input type="text" required></div>
+    <div><input type="text"></div>
+    <div><input type="text"></div>
+    <div><input type="text" disabled></div>
+    <div><input type="text"></div>
+    <div><input type="text" required></div>
+    <div><input type="text" disabled></div>
+
+<div>
+    <input type="checkbox">
+    <input type="checkbox">
+    <input type="checkbox">
+</div>
+<div>
+    <input type="checkbox" class = "cb-cat">
+    <img src="../images/catty01.png" class="cat">
+</div>
+<details>
+    <summary>sdf</summary>
+    <p>dsfsdfsdfsdf</p>
+</details>
+<h1>콘텐츠</h1>
+    설명 감추기<input type="checkbox" id="cb1">
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et quasi quod amet maiores, consectetur ea doloremque dolorem harum pariatur nemo deserunt excepturi cumque magni, ad odio cupiditate ullam qui vitae inventore. Error quaerat sapiente repudiandae corporis! Placeat ipsam repudiandae voluptatum nam numquam perferendis deserunt facilis cumque dolores inventore et voluptas illo aspernatur eaque praesentium laudantium perspiciatis enim cupiditate autem ducimus magni sit, commodi pariatur excepturi! Veritatis esse nemo voluptate sed totam officiis! Reprehenderit maiores perferendis mollitia perspiciatis officia ipsam accusamus explicabo harum numquam necessitatibus voluptates dicta iure ipsum quidem, facilis molestiae odio recusandae aut totam, quas eius architecto repellendus itaque! 
+    </div>
+
+    <hr>
+
+   <h1>콘텐츠</h1>
+
+   <input type="checkbox" id="cb2">
+   <label for="cb2">HyperText Markup Language</label>
+   <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore labore delectus minima quas, ipsam perspiciatis quos. Atque ipsa consequuntur quisquam voluptas rem, voluptates eum. Ducimus sed porro numquam quo atque.</div>
+</body>
+</html>

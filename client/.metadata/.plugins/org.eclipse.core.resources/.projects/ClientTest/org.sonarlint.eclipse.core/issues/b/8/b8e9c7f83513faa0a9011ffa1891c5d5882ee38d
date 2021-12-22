@@ -1,0 +1,34 @@
+
+\Web:TableWithoutCaptionCheck	" Add a description to this table.(ñšãúÿÿÿÿHúRMINORZBUG
+cWeb:TableWithoutCaptionCheck9" Add a description to this table.(•‰Óïúÿÿÿÿ8ğĞ—Ú/HŞRMINORZBUG
+N	Web:S5256	"%Add "<th>" headers to this "<table>".(ñšãúÿÿÿÿHûRMAJORZBUG
+U	Web:S5256#"%Add "<th>" headers to this "<table>".(ˆ¢°’ıÿÿÿÿ8¬Ëé–Ú/HÆRMAJORZBUG
+[	Web:S1827%")Remove this deprecated "align" attribute.(Ü§ì¼8ÁÊ‚—Ú/HÔRMAJORZ
+CODE_SMELL
+i	Web:S5254"@Add "lang" and/or "xml:lang" attributes to this "<html>" element(œ÷ÃûÿÿÿÿHùRMAJORZBUG
+U	Web:S52569"%Add "<th>" headers to this "<table>".(•‰Óïúÿÿÿÿ8ğĞ—Ú/HßRMAJORZBUG
+]	Web:S1827:"+Remove this deprecated "bgcolor" attribute.(Ş˜»‰8ˆ•—Ú/HõRMAJORZ
+CODE_SMELL
+`	Web:S1827#")Remove this deprecated "width" attribute.(ˆ¢°’ıÿÿÿÿ8¬Ëé–Ú/HÇRMAJORZ
+CODE_SMELL
+`	Web:S1827")Remove this deprecated "width" attribute.(ñšãúÿÿÿÿ8ÖÒ·–Ú/H‡RMAJORZ
+CODE_SMELL
+cWeb:TableWithoutCaptionCheck#" Add a description to this table.(ˆ¢°’ıÿÿÿÿ8¬Ëé–Ú/HÅRMINORZBUG
+b	Web:S18279"+Remove this deprecated "bgcolor" attribute.(•‰Óïúÿÿÿÿ8ğĞ—Ú/HàRMAJORZ
+CODE_SMELL
+\	Web:S1827"*Remove this deprecated "height" attribute.(Öª”8ÒÕÙ–Ú/H¸RMAJORZ
+CODE_SMELL
+`	Web:S1827")Remove this deprecated "width" attribute.(Š€Â×şÿÿÿÿ8»ÚÎ–Ú/H­RMAJORZ
+CODE_SMELL
+U	Web:S5256"%Add "<th>" headers to this "<table>".(ñšãúÿÿÿÿ8ÖÒ·–Ú/H†RMAJORZBUG
+e	Web:S1827?".Remove this deprecated "background" attribute.( ƒÇùÿÿÿÿ8äÑ’—Ú/HÿRMAJORZ
+CODE_SMELL
+\	Web:S1827"*Remove this deprecated "height" attribute.(ô©“ª8¹‡Û–Ú/H¾RMAJORZ
+CODE_SMELL
+`	Web:S18279")Remove this deprecated "width" attribute.(•‰Óïúÿÿÿÿ8ÇÛ—Ú/HëRMAJORZ
+CODE_SMELL
+[	Web:S1827")Remove this deprecated "width" attribute.(ô©“ª8¡ıÌ–Ú/H¨RMAJORZ
+CODE_SMELL
+cWeb:TableWithoutCaptionCheck" Add a description to this table.(ñšãúÿÿÿÿ8ÖÒ·–Ú/H…RMINORZBUG
+`	Web:S1827	")Remove this deprecated "width" attribute.(ñšãúÿÿÿÿ8Ú»®–Ú/HşRMAJORZ
+CODE_SMELL

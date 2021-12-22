@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<p>프레임 수업 입니다.</p>
+	<p>프레임 수업 입니다.</p>
+<iframe src="./ex17_form.html"></iframe>
+<iframe 
+	src="http://coupang.com" width="100%" height="218" 
+	frameborder="0" scrolling="no">
+</iframe>
+	<p>프레임 수업 입니다.</p>
+	<p>프레임 수업 입니다.</p>
+</body>
+</html>

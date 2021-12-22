@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<form action="ex20_ok.jsp"></form>
+
+이름: <input type="text">
+<hr>
+
+<input type="text" value ="이름을 입력하세요." onfocus= "this.value = '';">
+</body>
+</html>

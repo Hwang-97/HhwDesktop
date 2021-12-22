@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h2>2행2열 테이블</h2>
+	<table BORDER="1" width="200" height="200">
+		<tr>
+			<td>1</td>
+			<td>2</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>4</td>
+		</tr>
+	</table>
+	
+<h2>2행2열 테이블</h2>
+	<table BORDER="1" width="200" height="200">
+		<tr>
+			<td width = "100">1</td>
+			<td>2</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>4</td>
+		</tr>
+	</table>
+</body>
+</html>

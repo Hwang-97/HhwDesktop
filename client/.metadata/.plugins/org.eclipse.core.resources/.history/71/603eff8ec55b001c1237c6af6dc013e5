@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<p>프레임 수업 입니다.</p>
+	<p>프레임 수업 입니다.</p>
+<iframe src="./ex17_form.html"></iframe>
+<iframe src="http://cupang.com"></iframe>
+	<p>프레임 수업 입니다.</p>
+	<p>프레임 수업 입니다.</p>
+</body>
+</html>

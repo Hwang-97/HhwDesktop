@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Q02</title>
+</head>
+<body>
+<h1>Picture</h1>
+<h2>200x200</h2>
+<img src="./../../../images/placeimg_200_200_animals.jpg">
+</body>
+</html>

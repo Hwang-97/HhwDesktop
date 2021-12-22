@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main{
+            width: 300px;
+            height: 1000px;
+            margin-left: 200px;
+            margin-right: 200px;
+        }
+        .item{
+            border:1px solid#444;
+            width: 290px;
+            height: 150px;
+        }
+        #disc1{
+            background-image: url("lp01.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            float: right;
+            width: 200px;
+            height: 150px;
+        }
+        #disc2{
+            background-image: url("lp02.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            float: right;
+            width: 200px;
+            height: 150px;
+        }
+        #disc3{
+            background-image: url("lp03.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            float: right;
+            width: 200px;
+            height: 150px;
+        }
+        #disc4{
+            background-image: url("lp04.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            float: right;
+            width: 200px;
+            height: 150px;
+        }
+        #rb1{
+            background-color: #444;
+        }
+        label{
+            font-weight: bold;
+            background-color: #444;
+            display: inline-block;
+            width;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <h1>Music</h1>
+        <div class="item">
+            <input type="radio" name="rb" id="rb1">
+            <label for="rb1">Play</label>
+            <div class="disc" id="disc1"></div>
+        </div>
+        <div class="item">
+            <input type="radio" name="rb" id="rb2">
+            <label for="rb2">Play</label>
+            <div class="disc" id="disc2"></div>
+        </div>
+        <div class="item">
+            <input type="radio" name="rb" id="rb3">
+            <label for="rb3">Play</label>
+            <div class="disc" id="disc3"></div>
+        </div>
+        <div class="item">
+            <input type="radio" name="rb" id="rb4">
+            <label for="rb4">Play</label>
+            <div class="disc" id="disc4"></div>
+        </div>
+    </div>	
+</body>
+</html>

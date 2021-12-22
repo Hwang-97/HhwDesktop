@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            border:10px solid black;
+            width:200px;
+            height:200px;
+            background-color: gold;
+            transition-property: width height;
+            transition-duration: 1s;
+        }
+        #box:hover{
+            width:400px:
+            height:400px;
+            background-color:cornflowerblue;
+            font-size:10em;
+            opacity: 0;
+        }
+        #cat>img{
+            transition-property:all;
+            transition-duration: 3s;
+        }
+        #cat>img:hover{
+            transform: scale(1.5) rotate(360deg) translate(0px,-1000px);
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+    <div id="cat">
+        <img src="../images/catty01.png" alt="">
+        <img src="../images/catty02.png" alt="">
+        <img src="../images/catty03.png" alt="">
+        <img src="../images/catty04.png" alt="">
+        <img src="../images/catty05.png" alt="">
+    </div>
+</body>
+</html>

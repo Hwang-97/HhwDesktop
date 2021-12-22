@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .title{
+            margin-top: 5px;
+            margin-bottom: 5px;
+            display: inline-block;
+            font-weight: bold;
+            color: #777777;
+        }
+        #title{
+            font-size: 27.5px;
+            color: #6495ED;
+        }
+        #hint{
+            margin-left: 10px;
+        }
+        #line{
+            border-style:dashed;
+        }
+        #content{
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-right: 5px;
+            padding-left: 20px;
+            margin-top: 20px;
+            width: 500px;
+            border : 1px solid #7777778f;
+            font-size: 12px;
+        }
+        .divTag{
+            padding-bottom: 10px;
+            border-right: 1px solid #7777778f;
+            display: inline-block;
+            width: 75px;
+            padding-right: 10px;
+            padding-left: 10px;
+            text-align: center;
+            font-weight: bolder;
+        }
+        .divTag>span{
+            font-size: 10px;
+            color: #7777778f;
+        }
+        .divTag>image{
+            display: inline-block;
+        }
+        #d1>#day{
+            background-color: #00C73C;
+            border-top-left-radius: 45%;
+            border-bottom-left-radius: 45%;
+            border-top-right-radius: 45%;
+            border-bottom-right-radius: 45%;
+            color:white;
+        }
+        #d5{
+            border-right: 0px;
+        }
+        #contentTitle{
+            padding-left: 25px;
+            font-weight: bolder;
+        }
+        .wtimage{
+            width: 30px;
+        }
+        #data1,#data2,#data3,#data8,#data10{
+            font-size: 10px;
+            color: #59BFF0;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="headTitle">
+            <p id ="title" class="title">CSS&nbsp</p>
+            <P id="subTitle" class="title">아래와 같이 구현하시오.</P>
+            <P id = "hint">HINT:</P>
+        </div>
+    </header>
+
+    <hr id = "line">
+
+    <section id = "content">
+        <p id = "contentTitle">주간날씨</p>
+        <div id="d1" class="divTag">
+            목
+            <span id = "day">&nbsp오늘&nbsp</span>
+            <img class="wtimage" src="./exam01/icon_wt_22.svg">
+            <span id="data1">70%</span>
+            <img class="wtimage" src="./exam01/icon_wt_22.svg">
+            <span id="data2">60%</span>
+            <div>21º/25º</div>
+        </div>
+        <div id="d2" class="divTag">
+            금
+            <span>&nbsp내일&nbsp</span>
+            <img class="wtimage" src="./exam01/icon_wt_22.svg">
+            <span id="data3">60%</span>
+            <img class="wtimage" src="./exam01/icon_wt_07.svg">
+            <span>30%</span>
+            <div>21º/28º</div>
+        </div>
+        <div id="d3" class="divTag">
+            토
+            <span>&nbsp모레&nbsp</span>
+            <img class="wtimage" src="./exam01/icon_wt_07.svg">
+            <span>60%</span>
+            <img class="wtimage" src="./exam01/icon_wt_05.svg">
+            <span>30%</span>
+            <div>21º/28º</div>
+        </div>
+        <div id="d4" class="divTag">
+            일
+            <span>&nbsp6.28&nbsp</span>
+            <img class="wtimage" src="./exam01/icon_wt_05.svg">
+            <span >60%</span>
+            <img class="wtimage" src="./exam01/icon_wt_09.svg">
+            <span id="data8">30%</span>
+            <div>21º/28º</div>
+        </div>
+        <div id="d5" class="divTag">
+            월
+            <span>&nbsp6.29&nbsp</span>
+            <img class="wtimage" src="./exam01/icon_wt_05.svg">
+            <span >60%</span>
+            <img class="wtimage" src="./exam01/icon_wt_09.svg">
+            <span id="data10">30%</span>
+            <div>21º/28º</div>
+        </div>
+        <p></p>
+    </section>
+</body>
+</html>

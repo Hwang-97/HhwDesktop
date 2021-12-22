@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var now = new Date();
+        console.log(now);
+
+        console.log(now.getYear());     //121
+        console.log(now.getFullYear()); //2021
+        console.log(now.getMonth());
+        console.log(now.getDate());
+        console.log(now.getDay());
+        console.log(now.getHours());
+        console.log(now.getMinutes());
+        console.log(now.getSeconds());
+        console.log(now.getMilliseconds());
+        console.log(now.getTime());
+        console.log(now.getUTCHours());
+
+        console.log(now);
+        console.log(now.toString());
+        console.log(now.toLocaleString());
+        console.log(now.toDateString());
+        console.log(now.toLocaleDateString());
+        console.log(now.toTimeString());
+        console.log(now.toLocaleTimeString());
+
+        var chrismas = new Date();
+        chrismas.setFullYear(2021);
+        chrismas.setMonth(12);
+        chrismas.setDate(25);
+
+        console.log(chrismas.toLocaleString());
+
+        var birthday = new Date(1995,5,15);
+        console.log(birthday.toLocaleString());
+
+        console.log(chrismas-now);
+        console.log(chrismas.getTime()-now.getTime());
+
+        console.log((chrismas-now)/1000/60/60/24);
+
+        console.log(now.getTime()+100);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

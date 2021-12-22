@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<a href="http://www.naver.com">네이버로 이동합니다.</a>
+<br>
+<a href="ex10_list.html">ex10</a>
+<br>
+<a href="/client/html/ex10_list.html">ex10</a>
+</body>
+</html>

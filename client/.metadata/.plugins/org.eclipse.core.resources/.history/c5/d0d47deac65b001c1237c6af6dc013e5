@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<p>프레임 수업 입니다.</p>
+	<p>프레임 수업 입니다.</p>
+<iframe src="./ex17_form.html"></iframe>
+<iframe 
+	src="http://coupang.com" width="100%" height="218" 
+	frameborder="0" scrolling="no">
+</iframe>
+	<p>프레임 수업 입니다.</p>
+	<p>프레임 수업 입니다.</p>
+<table width="100%" height="500">
+	<tr>
+		<td width="200" valign="top">
+			<h2>국내 쇼핑몰</h2>
+			<ul>
+				<li><a href = "http://coupang.com">쿠팡</a></li>
+				<li><a href = "http://coupang.com">쿠팡</a></li>
+				<li><a href = "http://coupang.com">쿠팡</a></li>
+			</ul>
+		</td>
+	</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>주소록</h1>
+	<table border width="600">
+		<tr bgcolor ="#cccccc">
+			<td width="60" align = "center"><b>번호</b></td>
+			<td width="80" align = "center"><b>이름</b></td>
+			<td width="60" align = "center"><b>나이</b></td>
+			<td width="70" align = "center"><b>성별</b></td>
+			<td width="330" align = "center"><b>주소</b></td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>홍길동</td>
+			<td>20</td>
+			<td>남자</td>
+			<td>서울시 강남구 역삼동</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>아무개</td>
+			<td>22</td>
+			<td>남자</td>
+			<td>서울시 강남구 천호동</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>홍길동</td>
+			<td>20</td>
+			<td>남자</td>
+			<td>서울시 강남구 역삼동</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>아무개</td>
+			<td>22</td>
+			<td>남자</td>
+			<td>서울시 강남구 천호동</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>홍길동</td>
+			<td>20</td>
+			<td>남자</td>
+			<td>서울시 강남구 역삼동</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>아무개</td>
+			<td>22</td>
+			<td>남자</td>
+			<td>서울시 강남구 천호동</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>홍길동</td>
+			<td>20</td>
+			<td>남자</td>
+			<td>서울시 강남구 역삼동</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>아무개</td>
+			<td>22</td>
+			<td>남자</td>
+			<td>서울시 강남구 천호동</td>
+		</tr>
+		
+	</table>
+</body>
+</html>

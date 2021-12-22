@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span{color : red}
+        span:before{
+            content: '**';
+            color: blue;
+            content:open-quote;
+        }
+        span:after{
+            content: ']';
+            content:close-quote;
+        }
+        .box{
+            width:150px;
+            height: 150px;
+        }
+        /* #box1{
+            background:url('../../images/catty01.png') ro-repeat 10px 20 px; 
+        } */
+
+        #box1 {
+            background-color: tomato;
+            float:left;
+        }
+        #box2 {
+            background-color: gold;
+            float:left;
+        }
+        #box3 {
+            background-color: cornflowerblue;
+            float:left;
+        }
+        list:after{
+            content: ' ';
+            display: block;
+            clear: both;
+        }
+
+    </style>
+</head>
+<body>
+    <p><span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, in!</span>Omnis necessitatibus et facilis deleniti sequi quidem sapiente dolore neque?><span>Dolorum accusamus quia illo molestiae deleniti eos voluptas quidem velit.</span>Id nihil praesentium repellendus ipsam quam molestiae eaque sit impedit!<span>Dolorum natus minus explicabo odio, quis aperiam. Explicabo, quibusdam corrupti!</span></p>
+    <list>
+        <div id="box1" class="box">상자</div>
+        <div id="box2" class="box">상자</div>
+        <div id="box3" class="box">상자</div>
+    </list>
+    <a href="#!" id="link1">링크입니다.</a>
+</body>
+</html>

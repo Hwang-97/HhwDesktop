@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #card{
+            border: 1px solid black;
+            width: 1000px;
+            column-count: 5;
+        }
+        #card .item{
+            border: 1px solid black;
+            border-radius: 3px;
+            margin:0px auto 15px auto;
+            width: 150px;
+            box-shadow: 2px 2px 2px #AAA;
+            font-size: 14px;
+            color:#444;
+            page-break-inside: avoid;
+            display: inline-block;
+            /* float: left; */
+        }
+        #card .item img{
+            /* 인라인 태그 1개만을 가운데 정렬하는 방법(다른 인라인 태그는 그대로..) */
+            display: block;
+            margin: 0px auto;
+            box-shadow: -1px,-1px,1px black;
+        }
+        #card .item:hover{transform: scale(1.05,1.05);}
+        #card .item .txt{
+            margin:0px 12px 15px 12px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Card Layout</h1>
+<div id="card">
+    <div class="item">
+        <img src="../images/rect_icon01.png" alt="">
+        <div class="txt">Lorem ipsum dolor sit amet.</div>
+    </div>
+    <div class="item">
+        <img src="../images/rect_icon02.png" alt="">
+        <div class="txt">Quia ipsa nostrum illum obcaecati?</div>
+    </div>
+    <div class="item">
+        <img src="../images/rect_icon03.png" alt="">
+        <div class="txt">Ipsum molestias expedita veritatis vel.</div>
+    </div>
+    <div class="item">
+        <img src="../images/rect_icon04.png" alt="">
+        <div class="txt">Nihil a beatae aspernatur voluptate.</div>
+    </div>
+    <div class="item">
+        <img src="../images/rect_icon05.png" alt="">
+        <div class="txt">Qui quisquam dolore reiciendis minus?</div>
+    </div>
+    <div class="item">
+        <img src="../images/rect_icon06.png" alt="">
+        <div class="txt">Vitae, dolores! Omnis, dicta reprehenderit.</div>
+    </div>
+    <div class="item">
+        <img src="../images/rect_icon07.png" alt="">
+        <div class="txt">Adipisci consequuntur voluptates vel! Facilis.</div>
+    </div>
+    <div class="item">
+        <img src="../images/rect_icon08.png" alt="">
+        <div class="txt">Reprehenderit nostrum iure porro assumenda?</div>
+    </div>
+    <div class="item">
+        <img src="../images/rect_icon09.png" alt="">
+        <div class="txt">Iusto quisquam odio distinctio quod.</div>
+    </div>
+    <div class="item">
+        <img src="../images/rect_icon10.png" alt="">
+        <div class="txt">Veritatis aut totam porro perspiciatis.</div>
+    </div>
+    <div class="item">
+        <img src="../images/rect_icon11.png" alt="">
+        <div class="txt">Velit error quos nobis fuga.</div>
+    </div>
+    <div class="item">
+        <img src="../images/rect_icon12.png" alt="">
+        <div class="txt">Eligendi, doloribus. Voluptate, distinctio veniam.</div>
+    </div>
+    <div class="item">
+        <img src="../images/rect_icon13.png" alt="">
+        <div class="txt">Placeat eligendi recusandae eveniet dolor?</div>
+    </div>
+    <div class="item">
+        <img src="../images/rect_icon14.png" alt="">
+        <div class="txt">Provident eos doloribus nam mollitia.</div>
+    </div>
+    <div class="item">
+        <img src="../images/rect_icon15.png" alt="">
+        <div class="txt">Sed deserunt nisi aspernatur architecto?</div>
+    </div>
+    <div class="item">
+        <img src="../images/rect_icon16.png" alt="">
+        <div class="txt">Laboriosam dolorum reiciendis corporis sit.</div>
+    </div>
+    <div class="item">
+        <img src="../images/rect_icon17.png" alt="">
+        <div class="txt">Rerum aperiam ratione placeat quasi!</div>
+    </div>
+    <div class="item">
+        <img src="../images/rect_icon18.png" alt="">
+        <div class="txt">Soluta, ratione. Consequuntur, fugiat sit.</div>
+    </div>
+</div>
+</body>
+</html>
