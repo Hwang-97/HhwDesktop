@@ -1,0 +1,32 @@
+@font-face {
+    font-family: 'GilbeotRainbow';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/GilbeotRainbow.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'KOTRAHOPE';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/KOTRAHOPE.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body,p,spqn,a,table,th,td,input,textArea,option,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,small,button{
+	font-family:'KOTRAHOPE';
+}
+.contaner{
+	width:600px;
+}
+
+.table.vertical th{
+	width:150px;
+	text-align:center;
+	vertical-align:middle;s
+}
+.form-control.short{
+	width:100px;
+}
+.form-control.middle{
+	width:170px;
+}

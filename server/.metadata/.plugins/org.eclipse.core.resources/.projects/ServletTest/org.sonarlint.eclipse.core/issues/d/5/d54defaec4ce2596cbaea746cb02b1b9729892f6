@@ -1,0 +1,17 @@
+
+i
+java:S6126*"2Replace this String concatenation with Text block.(ÉÌù¼úÿÿÿÿ8‘‰õÇâ/HnRMAJORZ
+CODE_SMELL
+S
+java:S1643("Use a StringBuilder instead.(Àñ–¹ÿÿÿÿÿ8‘‰õÇâ/HmRMINORZ
+CODE_SMELL
+q
+java:S1161":Add the "@Override" annotation above this method signature(°Å·ðþÿÿÿÿ8‘‰õÇâ/HrRMAJORZ
+CODE_SMELL
+…
+java:S1989"PHandle the following exception that could be thrown by "getWriter": IOException.(×–·›8‘‰õÇâ/HqRMINORZVULNERABILITY
+L
+java:S2119"Save and re-use this "Random".(–áÍÈ8‘‰õÇâ/HtRCRITICALZBUG
+S
+java:S1116)"Remove this empty statement.(ôŸŽìúÿÿÿÿ8‘‰õÇâ/HoRMINORZ
+CODE_SMELL

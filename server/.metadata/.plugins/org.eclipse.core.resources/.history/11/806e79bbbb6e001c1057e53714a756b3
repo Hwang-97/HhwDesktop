@@ -1,0 +1,53 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+<%@include file="/inc/asset.jsp" %>
+<style>
+
+</style>
+</head>
+<body>
+	
+	<div class="container">
+		<h1>HTTP 요청 메시지 <small>헤더정보</small></h1>
+		
+		<table class="table table-bordered">
+			<tr>
+				<th>헤더명(key)</th>
+				<th>헤더값(value))</th>
+			</tr>
+			<% 
+				Enumertation<String> e = request.getHeaderNames();
+			
+				while(e.hasMoreElements()){
+					String name = e.nextElement();
+				
+			%>
+			<tr>
+				<td><%= name %></td>
+				<td><%= request %></td>
+			</tr>
+			<% }%>
+		</table>
+		
+		<hr>
+		
+		<p> : <%=request.getServerName() %></p>
+		<p> : <%=request.getServerPort() %></p>
+		<p> : <%=request.getRequestURI() %></p>
+		<p> : <%=request.getQueryString() %></p>
+		<p> : <%=request.getRemoteHost() %></p>
+		<p> : <%=request.getProtocol() %></p>
+		<p> : <%=request.getMethod() %></p>
+		<p> : <%=request.getContextPath() %></p>
+	</div>
+
+<script>
+
+</script>
+</body>
+</html>

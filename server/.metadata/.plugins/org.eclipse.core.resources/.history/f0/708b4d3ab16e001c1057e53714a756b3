@@ -1,0 +1,71 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%
+	
+	request.setCharacterEncoding("UTF-8");
+
+	String txt1 = request.getParameter("txt1");
+	
+	String pass = request.getParameter("pass");
+	
+	String textArea = request.getParameter("txtArea");
+	textArea = textArea.replace("\r\n", "<br>");
+	
+	String color = request.getParameter("color");
+	
+	String cb1 = request.getParameter("cb1");
+
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<%@include file="/inc/asset.jsp" %>
+<body>
+
+	<div>
+		<h1 class =  "page-header" >결과</h1>
+			<table class="table table-bordered">
+				<tr>
+					<th>텍스트 박스</th>
+					<td><%=txt1 %></td>
+				</tr>
+				<tr>
+					<th>password</th>
+					<td><%=pass %></td>
+				</tr>
+				<tr>
+					<th>textArea</th>
+					<td><%=textArea %></td>
+				</tr>
+				<tr>
+					<th>color</th>
+					<td style="background-color:<%=color %>"><%=color %></td>
+				</tr>
+				<tr>
+					<th>checkBox</th>
+					<td><%=cb1 %></td>
+				</tr>
+				<tr>
+					<th></th>
+					<td></td>
+				</tr>
+				<tr>
+					<th></th>
+					<td></td>
+				</tr>
+				<tr>
+					<th></th>
+					<td></td>
+				</tr>
+				<tr>
+					<th></th>
+					<td></td>
+				</tr>
+			</table>
+	</div>
+
+</body>
+</html>

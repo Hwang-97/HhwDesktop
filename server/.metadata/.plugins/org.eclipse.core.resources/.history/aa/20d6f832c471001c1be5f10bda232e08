@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'GilbeotRainbow';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/GilbeotRainbow.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body,p,spqn,a,table,th,td,input,textArea,option,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,small,button{
+	font-family:'GilbeotRainbow';
+}

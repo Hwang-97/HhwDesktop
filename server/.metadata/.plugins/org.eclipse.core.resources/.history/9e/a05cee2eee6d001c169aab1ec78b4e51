@@ -1,0 +1,17 @@
+package com.test.servlet;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class Hello extends HttpServlet {//1번
+	
+	//2번 doGet / do Post 메소드 선언
+	public void doGet(HttpServletRequest request , HttpServletResponse response) throws IOException, ServletException{
+		
+	}
+
+}

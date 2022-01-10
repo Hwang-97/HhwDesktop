@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>ServletTest2</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <servlet-name>hello</servlet-name>
+    <servlet-class>com.test.servlet.Hello</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>hello</servlet-name>
+    <url-pattern>/hello.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ex01</servlet-name>
+    <servlet-class>com.test.servlet.Ex01</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ex01</servlet-name>
+    <url-pattern>/ex01.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>Ex02</servlet-name>
+    <servlet-class>com.test.servlet.Ex02</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Ex02</servlet-name>
+    <url-pattern>/ex02.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>Ex02ok</servlet-name>
+    <servlet-class>com.test.servlet.Ex02ok</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Ex02ok</servlet-name>
+    <url-pattern>/ex02ok.do</url-pattern>
+  </servlet-mapping>
+</web-app>

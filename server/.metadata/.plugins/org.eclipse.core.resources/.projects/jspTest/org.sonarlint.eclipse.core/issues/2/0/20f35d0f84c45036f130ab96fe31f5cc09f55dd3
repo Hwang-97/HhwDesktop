@@ -1,0 +1,9 @@
+
+n	java:S125"<This block of commented-out lines of code should be removed.(Óßƒ8¸¸ıŒä/H¹RMAJORZ
+CODE_SMELL
+r
+java:S1118":Add a private constructor to hide the implicit public one.(¨¥âŸûÿÿÿÿ8¸¸ıŒä/HºRMAJORZ
+CODE_SMELL
+`
+java:S4925"-Remove this "Class.forName()", it is useless.(ùíÄé8¸¸ıŒä/H»RMAJORZ
+CODE_SMELL

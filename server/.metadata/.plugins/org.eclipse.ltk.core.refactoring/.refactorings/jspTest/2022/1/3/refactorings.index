@@ -1,0 +1,16 @@
+1641774540967	Move 'jdbc' to 'jspTest'
+1641774547340	Move 'insert.jsp' to 'WEB-INF'
+1641774563839	Move 'insert.jsp' to 'webapp'
+1641774700476	Move 'delete.jsp' to 'jdbc'
+1641774707857	Move 3 resources to 'jdbc'
+1641775685397	Move 'jdbc' to 'webapp'
+1641783944725	Copy file
+1641783950837	Copy file
+1641783956611	Copy file
+1641783960048	Copy file
+1641783965271	Copy file
+1641783972383	Copy file
+1641784209800	Copy file
+1641784220288	Delete element
+1641784222148	Delete element
+1641786658028	Rename resource 'addbok.jsp'
